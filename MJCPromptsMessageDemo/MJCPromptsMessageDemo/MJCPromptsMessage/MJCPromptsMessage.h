@@ -11,9 +11,9 @@
 #import "UIView+MJCExtenSion.h"
 
 typedef enum {
-    MJCPromptsMessageblack,
-    MJCPromptsMessageWhite
-}MJCPromptsMessageStyle;
+    MJCPromptsTypeblack,
+    MJCPromptsTypeWhite
+}MJCPromptsTypeStyle;
 
 typedef enum {
     MJCPromptsMessagesblack,
@@ -26,7 +26,7 @@ typedef enum {
 /**
  * MJCPromptsMessageStyle类型 (成功与失败的样式)
  */
-+(void)showPromptsMessageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle;
++(void)showPromptsTypeStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 
 /**
  * MJCPromptsMessagesStyle类型 (样式)
@@ -37,11 +37,17 @@ typedef enum {
 /**
  * 提示图片或文字信息(可修改类型)
  */
-+(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
++(void)showMessage:(NSString *)msg
+             image:(UIImage *)image
+        autoHidden:(BOOL)autoHidden
+      messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
 /**
  * 提示图片或文字信息(可修改背景色)
  */
-+(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor image:(UIImage *)image  msgHidden:(BOOL)msgHidden;
++(void)showMessage:(NSString *)msg
+         backColor:(UIColor *)backColor
+             image:(UIImage *)image
+         msgHidden:(BOOL)msgHidden;
 
 /**
  * 提示图片或文字信息(自动消失)
@@ -67,7 +73,7 @@ typedef enum {
 /**
  * 提示成功信息(自动消失)
  */
-+(void)showAutoHiddenSuccess:(NSString *)successmsg messageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle;
++ (void)showAutoHiddenSuccess:(NSString *)successmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 + (void)showAutoHiddenSuccess:(NSString *)msg;
 /** 提示加载成功(加载成功) */
 + (void)showAutoHiddenSuccess;
@@ -78,7 +84,7 @@ typedef enum {
 /**
  * 提示失败信息(自动消失)
  */
-+(void)showAutoHiddenError:(NSString *)errormsg messageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle;
++(void)showAutoHiddenError:(NSString *)errormsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 + (void)showAutoHiddenError:(NSString *)msg;
 /** 提示失败信息(加载失败) */
 + (void)showAutoHiddenError;
@@ -87,7 +93,7 @@ typedef enum {
 /**
  * 提示正在加载中(不自动消失)
  */
-+(void)showLoading:(NSString *)loadingmsg messageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle;
++(void)showLoading:(NSString *)loadingmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 + (void)showLoading:(NSString *)msg;
 /** 提示正在加载中(正在加载中) */
 + (void)showLoading;

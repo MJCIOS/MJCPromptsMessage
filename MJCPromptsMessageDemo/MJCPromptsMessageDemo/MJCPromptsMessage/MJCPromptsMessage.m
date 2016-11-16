@@ -20,10 +20,9 @@ static int imageInter;
 
 @implementation MJCPromptsMessage
 
-
-+(void)showPromptsMessageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle
++(void)showPromptsTypeStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 {
-    if (MJCPromptsMessageStyle == MJCPromptsMessageblack) {
+    if (MJCPromptsTypeStyle == MJCPromptsTypeblack) {
         [MJCPromptsView showMessageColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
         [MJCPromptsView showMessageTextColor:[UIColor whiteColor]];
         [self setupshowMessageImage:@"successwhite" errorImage:@"errorwhite@2x 2"];
@@ -32,6 +31,7 @@ static int imageInter;
         [MJCPromptsView showMessageTextColor:[UIColor blackColor]];
         [self setupshowMessageImage:@"success" errorImage:@"error"];
     }
+
 }
 
 +(void)showPromptsMessagesStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
@@ -89,7 +89,7 @@ static int imageInter;
     
     }else{
         [MJCPromptsView showAutoMessage:msg image:image textColor:nil msgHidden:msgHidden];
-        [self showPromptsMessageStyle:MJCPromptsMessageblack];
+        [self showPromptsTypeStyle:MJCPromptsTypeblack];
     }
 }
 // 显示普通信息(,自动消失)
@@ -105,16 +105,16 @@ static int imageInter;
         
     }else{
         [MJCPromptsView showAutoMessage:msg image:nil textColor:nil msgHidden:msgHidden];
-        [self showPromptsMessageStyle:MJCPromptsMessageblack];
+        [self showPromptsTypeStyle:MJCPromptsTypeblack];
     }
 }
 
 #pragma mark !!!:提显示成功信息
 // 提显示成功信息
-+(void)showAutoHiddenSuccess:(NSString *)successmsg messageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle
++(void)showAutoHiddenSuccess:(NSString *)successmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle
 {
     [self showAutoHiddenSuccess:successmsg];
-    [self showPromptsMessageStyle:MJCPromptsMessageStyle];
+    [self showPromptsTypeStyle:MJCPromptsTypeStyle];
 }
 
 // 提显示成功信息(不自动消失,用户自己设置文字)
@@ -123,7 +123,7 @@ static int imageInter;
     imageInter = 1;
     
     [self showAutoHiddenMessage:msg image:[UIImage imageNamed:@"successwhite"]];
-    [self showPromptsMessageStyle:MJCPromptsMessageblack];
+    [self showPromptsTypeStyle:MJCPromptsTypeblack];
     
 }
 
@@ -131,16 +131,16 @@ static int imageInter;
 +(void)showAutoHiddenSuccess
 {
     [self showAutoHiddenSuccess:@"加载成功..."];
-    [self showPromptsMessageStyle:MJCPromptsMessageblack];
+    [self showPromptsTypeStyle:MJCPromptsTypeblack];
 }
 
 
 #pragma mark !!!:显示失败信息
 // 显示失败信息
-+(void)showAutoHiddenError:(NSString *)errormsg messageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle
++(void)showAutoHiddenError:(NSString *)errormsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle
 {
     [self showAutoHiddenError:errormsg];
-    [self showPromptsMessageStyle:MJCPromptsMessageStyle];
+    [self showPromptsTypeStyle:MJCPromptsTypeStyle];
 }
 
 // 显示失败信息(不自动消失,用户自己设置文字)
@@ -149,28 +149,29 @@ static int imageInter;
     imageInter = 2;
     
     [self showAutoHiddenMessage:msg image:[UIImage imageNamed:@"errorwhite"]];
-    [self showPromptsMessageStyle:MJCPromptsMessageblack];
+    [self showPromptsTypeStyle:MJCPromptsTypeblack];
 }
 // 显示失败信息(不自动消失,设置好文字了)
 + (void)showAutoHiddenError
 {
     [self showAutoHiddenError:@"加载失败..."];
-    [self showPromptsMessageStyle:MJCPromptsMessageblack];
+    [self showPromptsTypeStyle:MJCPromptsTypeblack];
 }
 
 
 #pragma mark !!!:正在加载信息
-+(void)showLoading:(NSString *)loadingmsg messageStyle:(MJCPromptsMessageStyle)MJCPromptsMessageStyle;
++(void)showLoading:(NSString *)loadingmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 {
     [self showLoading:loadingmsg];
-    [self showPromptsMessageStyle:MJCPromptsMessageStyle];
+    
+    [self showPromptsTypeStyle:MJCPromptsTypeStyle];
 }
 
 // 正在加载信息(不自动消失,用户自己设置文字)
 + (void)showLoading:(NSString *)msg
 {
     [MJCPromptsView showloading:msg textColor:nil];
-    [self showPromptsMessageStyle:MJCPromptsMessageblack];
+    [self showPromptsTypeStyle:MJCPromptsTypeblack];
 }
 
 // 正在加载信息(不自动消失,设置好文字了)
