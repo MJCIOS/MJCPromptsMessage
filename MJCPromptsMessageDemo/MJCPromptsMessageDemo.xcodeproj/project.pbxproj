@@ -7,68 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25A4798B1DDC7DE000AE2829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A4798A1DDC7DE000AE2829 /* main.m */; };
-		25A4798E1DDC7DE000AE2829 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A4798D1DDC7DE000AE2829 /* AppDelegate.m */; };
-		25A479911DDC7DE000AE2829 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479901DDC7DE000AE2829 /* ViewController.m */; };
-		25A479941DDC7DE000AE2829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A479921DDC7DE000AE2829 /* Main.storyboard */; };
-		25A479961DDC7DE000AE2829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A479951DDC7DE000AE2829 /* Assets.xcassets */; };
-		25A479991DDC7DE000AE2829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A479971DDC7DE000AE2829 /* LaunchScreen.storyboard */; };
-		25A479A41DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479A31DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.m */; };
-		25A479AF1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479AE1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.m */; };
+		25A479CA1DDC7F5500AE2829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479C91DDC7F5500AE2829 /* main.m */; };
+		25A479CD1DDC7F5500AE2829 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479CC1DDC7F5500AE2829 /* AppDelegate.m */; };
+		25A479D01DDC7F5500AE2829 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479CF1DDC7F5500AE2829 /* ViewController.m */; };
+		25A479D31DDC7F5500AE2829 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A479D11DDC7F5500AE2829 /* Main.storyboard */; };
+		25A479D51DDC7F5500AE2829 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A479D41DDC7F5500AE2829 /* Assets.xcassets */; };
+		25A479D81DDC7F5500AE2829 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A479D61DDC7F5500AE2829 /* LaunchScreen.storyboard */; };
+		25A479E31DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479E21DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.m */; };
+		25A479EE1DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479ED1DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		25A479A01DDC7DE000AE2829 /* PBXContainerItemProxy */ = {
+		25A479DF1DDC7F5500AE2829 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 25A4797E1DDC7DE000AE2829 /* Project object */;
+			containerPortal = 25A479BD1DDC7F5500AE2829 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 25A479851DDC7DE000AE2829;
+			remoteGlobalIDString = 25A479C41DDC7F5500AE2829;
 			remoteInfo = MJCPromptsMessageDemo;
 		};
-		25A479AB1DDC7DE000AE2829 /* PBXContainerItemProxy */ = {
+		25A479EA1DDC7F5500AE2829 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 25A4797E1DDC7DE000AE2829 /* Project object */;
+			containerPortal = 25A479BD1DDC7F5500AE2829 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 25A479851DDC7DE000AE2829;
+			remoteGlobalIDString = 25A479C41DDC7F5500AE2829;
 			remoteInfo = MJCPromptsMessageDemo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25A479861DDC7DE000AE2829 /* MJCPromptsMessageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJCPromptsMessageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		25A4798A1DDC7DE000AE2829 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		25A4798C1DDC7DE000AE2829 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		25A4798D1DDC7DE000AE2829 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		25A4798F1DDC7DE000AE2829 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		25A479901DDC7DE000AE2829 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		25A479931DDC7DE000AE2829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		25A479951DDC7DE000AE2829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		25A479981DDC7DE000AE2829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		25A4799A1DDC7DE000AE2829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25A4799F1DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJCPromptsMessageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25A479A31DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJCPromptsMessageDemoTests.m; sourceTree = "<group>"; };
-		25A479A51DDC7DE000AE2829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25A479AA1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJCPromptsMessageDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25A479AE1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJCPromptsMessageDemoUITests.m; sourceTree = "<group>"; };
-		25A479B01DDC7DE000AE2829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25A479C51DDC7F5500AE2829 /* MJCPromptsMessageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJCPromptsMessageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A479C91DDC7F5500AE2829 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25A479CB1DDC7F5500AE2829 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		25A479CC1DDC7F5500AE2829 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		25A479CE1DDC7F5500AE2829 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		25A479CF1DDC7F5500AE2829 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		25A479D21DDC7F5500AE2829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25A479D41DDC7F5500AE2829 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25A479D71DDC7F5500AE2829 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25A479D91DDC7F5500AE2829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25A479DE1DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJCPromptsMessageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A479E21DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJCPromptsMessageDemoTests.m; sourceTree = "<group>"; };
+		25A479E41DDC7F5500AE2829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25A479E91DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJCPromptsMessageDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A479ED1DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJCPromptsMessageDemoUITests.m; sourceTree = "<group>"; };
+		25A479EF1DDC7F5500AE2829 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		25A479831DDC7DE000AE2829 /* Frameworks */ = {
+		25A479C21DDC7F5500AE2829 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25A4799C1DDC7DE000AE2829 /* Frameworks */ = {
+		25A479DB1DDC7F5500AE2829 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25A479A71DDC7DE000AE2829 /* Frameworks */ = {
+		25A479E61DDC7F5500AE2829 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,64 +78,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25A4797D1DDC7DE000AE2829 = {
+		25A479BC1DDC7F5500AE2829 = {
 			isa = PBXGroup;
 			children = (
-				25A479881DDC7DE000AE2829 /* MJCPromptsMessageDemo */,
-				25A479A21DDC7DE000AE2829 /* MJCPromptsMessageDemoTests */,
-				25A479AD1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests */,
-				25A479871DDC7DE000AE2829 /* Products */,
+				25A479C71DDC7F5500AE2829 /* MJCPromptsMessageDemo */,
+				25A479E11DDC7F5500AE2829 /* MJCPromptsMessageDemoTests */,
+				25A479EC1DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests */,
+				25A479C61DDC7F5500AE2829 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		25A479871DDC7DE000AE2829 /* Products */ = {
+		25A479C61DDC7F5500AE2829 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25A479861DDC7DE000AE2829 /* MJCPromptsMessageDemo.app */,
-				25A4799F1DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.xctest */,
-				25A479AA1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.xctest */,
+				25A479C51DDC7F5500AE2829 /* MJCPromptsMessageDemo.app */,
+				25A479DE1DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.xctest */,
+				25A479E91DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		25A479881DDC7DE000AE2829 /* MJCPromptsMessageDemo */ = {
+		25A479C71DDC7F5500AE2829 /* MJCPromptsMessageDemo */ = {
 			isa = PBXGroup;
 			children = (
-				25A4798C1DDC7DE000AE2829 /* AppDelegate.h */,
-				25A4798D1DDC7DE000AE2829 /* AppDelegate.m */,
-				25A4798F1DDC7DE000AE2829 /* ViewController.h */,
-				25A479901DDC7DE000AE2829 /* ViewController.m */,
-				25A479921DDC7DE000AE2829 /* Main.storyboard */,
-				25A479951DDC7DE000AE2829 /* Assets.xcassets */,
-				25A479971DDC7DE000AE2829 /* LaunchScreen.storyboard */,
-				25A4799A1DDC7DE000AE2829 /* Info.plist */,
-				25A479891DDC7DE000AE2829 /* Supporting Files */,
+				25A479CB1DDC7F5500AE2829 /* AppDelegate.h */,
+				25A479CC1DDC7F5500AE2829 /* AppDelegate.m */,
+				25A479CE1DDC7F5500AE2829 /* ViewController.h */,
+				25A479CF1DDC7F5500AE2829 /* ViewController.m */,
+				25A479D11DDC7F5500AE2829 /* Main.storyboard */,
+				25A479D41DDC7F5500AE2829 /* Assets.xcassets */,
+				25A479D61DDC7F5500AE2829 /* LaunchScreen.storyboard */,
+				25A479D91DDC7F5500AE2829 /* Info.plist */,
+				25A479C81DDC7F5500AE2829 /* Supporting Files */,
 			);
 			path = MJCPromptsMessageDemo;
 			sourceTree = "<group>";
 		};
-		25A479891DDC7DE000AE2829 /* Supporting Files */ = {
+		25A479C81DDC7F5500AE2829 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				25A4798A1DDC7DE000AE2829 /* main.m */,
+				25A479C91DDC7F5500AE2829 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		25A479A21DDC7DE000AE2829 /* MJCPromptsMessageDemoTests */ = {
+		25A479E11DDC7F5500AE2829 /* MJCPromptsMessageDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				25A479A31DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.m */,
-				25A479A51DDC7DE000AE2829 /* Info.plist */,
+				25A479E21DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.m */,
+				25A479E41DDC7F5500AE2829 /* Info.plist */,
 			);
 			path = MJCPromptsMessageDemoTests;
 			sourceTree = "<group>";
 		};
-		25A479AD1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests */ = {
+		25A479EC1DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				25A479AE1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.m */,
-				25A479B01DDC7DE000AE2829 /* Info.plist */,
+				25A479ED1DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.m */,
+				25A479EF1DDC7F5500AE2829 /* Info.plist */,
 			);
 			path = MJCPromptsMessageDemoUITests;
 			sourceTree = "<group>";
@@ -143,13 +143,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		25A479851DDC7DE000AE2829 /* MJCPromptsMessageDemo */ = {
+		25A479C41DDC7F5500AE2829 /* MJCPromptsMessageDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25A479B31DDC7DE000AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemo" */;
+			buildConfigurationList = 25A479F21DDC7F5500AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemo" */;
 			buildPhases = (
-				25A479821DDC7DE000AE2829 /* Sources */,
-				25A479831DDC7DE000AE2829 /* Frameworks */,
-				25A479841DDC7DE000AE2829 /* Resources */,
+				25A479C11DDC7F5500AE2829 /* Sources */,
+				25A479C21DDC7F5500AE2829 /* Frameworks */,
+				25A479C31DDC7F5500AE2829 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -157,71 +157,71 @@
 			);
 			name = MJCPromptsMessageDemo;
 			productName = MJCPromptsMessageDemo;
-			productReference = 25A479861DDC7DE000AE2829 /* MJCPromptsMessageDemo.app */;
+			productReference = 25A479C51DDC7F5500AE2829 /* MJCPromptsMessageDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		25A4799E1DDC7DE000AE2829 /* MJCPromptsMessageDemoTests */ = {
+		25A479DD1DDC7F5500AE2829 /* MJCPromptsMessageDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25A479B61DDC7DE000AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoTests" */;
+			buildConfigurationList = 25A479F51DDC7F5500AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoTests" */;
 			buildPhases = (
-				25A4799B1DDC7DE000AE2829 /* Sources */,
-				25A4799C1DDC7DE000AE2829 /* Frameworks */,
-				25A4799D1DDC7DE000AE2829 /* Resources */,
+				25A479DA1DDC7F5500AE2829 /* Sources */,
+				25A479DB1DDC7F5500AE2829 /* Frameworks */,
+				25A479DC1DDC7F5500AE2829 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				25A479A11DDC7DE000AE2829 /* PBXTargetDependency */,
+				25A479E01DDC7F5500AE2829 /* PBXTargetDependency */,
 			);
 			name = MJCPromptsMessageDemoTests;
 			productName = MJCPromptsMessageDemoTests;
-			productReference = 25A4799F1DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.xctest */;
+			productReference = 25A479DE1DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		25A479A91DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests */ = {
+		25A479E81DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25A479B91DDC7DE000AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoUITests" */;
+			buildConfigurationList = 25A479F81DDC7F5500AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoUITests" */;
 			buildPhases = (
-				25A479A61DDC7DE000AE2829 /* Sources */,
-				25A479A71DDC7DE000AE2829 /* Frameworks */,
-				25A479A81DDC7DE000AE2829 /* Resources */,
+				25A479E51DDC7F5500AE2829 /* Sources */,
+				25A479E61DDC7F5500AE2829 /* Frameworks */,
+				25A479E71DDC7F5500AE2829 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				25A479AC1DDC7DE000AE2829 /* PBXTargetDependency */,
+				25A479EB1DDC7F5500AE2829 /* PBXTargetDependency */,
 			);
 			name = MJCPromptsMessageDemoUITests;
 			productName = MJCPromptsMessageDemoUITests;
-			productReference = 25A479AA1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.xctest */;
+			productReference = 25A479E91DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		25A4797E1DDC7DE000AE2829 /* Project object */ = {
+		25A479BD1DDC7F5500AE2829 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = MJC;
 				TargetAttributes = {
-					25A479851DDC7DE000AE2829 = {
+					25A479C41DDC7F5500AE2829 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
-					25A4799E1DDC7DE000AE2829 = {
+					25A479DD1DDC7F5500AE2829 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 25A479851DDC7DE000AE2829;
+						TestTargetID = 25A479C41DDC7F5500AE2829;
 					};
-					25A479A91DDC7DE000AE2829 = {
+					25A479E81DDC7F5500AE2829 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 25A479851DDC7DE000AE2829;
+						TestTargetID = 25A479C41DDC7F5500AE2829;
 					};
 				};
 			};
-			buildConfigurationList = 25A479811DDC7DE000AE2829 /* Build configuration list for PBXProject "MJCPromptsMessageDemo" */;
+			buildConfigurationList = 25A479C01DDC7F5500AE2829 /* Build configuration list for PBXProject "MJCPromptsMessageDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,37 +229,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 25A4797D1DDC7DE000AE2829;
-			productRefGroup = 25A479871DDC7DE000AE2829 /* Products */;
+			mainGroup = 25A479BC1DDC7F5500AE2829;
+			productRefGroup = 25A479C61DDC7F5500AE2829 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				25A479851DDC7DE000AE2829 /* MJCPromptsMessageDemo */,
-				25A4799E1DDC7DE000AE2829 /* MJCPromptsMessageDemoTests */,
-				25A479A91DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests */,
+				25A479C41DDC7F5500AE2829 /* MJCPromptsMessageDemo */,
+				25A479DD1DDC7F5500AE2829 /* MJCPromptsMessageDemoTests */,
+				25A479E81DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		25A479841DDC7DE000AE2829 /* Resources */ = {
+		25A479C31DDC7F5500AE2829 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A479991DDC7DE000AE2829 /* LaunchScreen.storyboard in Resources */,
-				25A479961DDC7DE000AE2829 /* Assets.xcassets in Resources */,
-				25A479941DDC7DE000AE2829 /* Main.storyboard in Resources */,
+				25A479D81DDC7F5500AE2829 /* LaunchScreen.storyboard in Resources */,
+				25A479D51DDC7F5500AE2829 /* Assets.xcassets in Resources */,
+				25A479D31DDC7F5500AE2829 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25A4799D1DDC7DE000AE2829 /* Resources */ = {
+		25A479DC1DDC7F5500AE2829 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25A479A81DDC7DE000AE2829 /* Resources */ = {
+		25A479E71DDC7F5500AE2829 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,60 +269,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25A479821DDC7DE000AE2829 /* Sources */ = {
+		25A479C11DDC7F5500AE2829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A479911DDC7DE000AE2829 /* ViewController.m in Sources */,
-				25A4798E1DDC7DE000AE2829 /* AppDelegate.m in Sources */,
-				25A4798B1DDC7DE000AE2829 /* main.m in Sources */,
+				25A479D01DDC7F5500AE2829 /* ViewController.m in Sources */,
+				25A479CD1DDC7F5500AE2829 /* AppDelegate.m in Sources */,
+				25A479CA1DDC7F5500AE2829 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25A4799B1DDC7DE000AE2829 /* Sources */ = {
+		25A479DA1DDC7F5500AE2829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A479A41DDC7DE000AE2829 /* MJCPromptsMessageDemoTests.m in Sources */,
+				25A479E31DDC7F5500AE2829 /* MJCPromptsMessageDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25A479A61DDC7DE000AE2829 /* Sources */ = {
+		25A479E51DDC7F5500AE2829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A479AF1DDC7DE000AE2829 /* MJCPromptsMessageDemoUITests.m in Sources */,
+				25A479EE1DDC7F5500AE2829 /* MJCPromptsMessageDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		25A479A11DDC7DE000AE2829 /* PBXTargetDependency */ = {
+		25A479E01DDC7F5500AE2829 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 25A479851DDC7DE000AE2829 /* MJCPromptsMessageDemo */;
-			targetProxy = 25A479A01DDC7DE000AE2829 /* PBXContainerItemProxy */;
+			target = 25A479C41DDC7F5500AE2829 /* MJCPromptsMessageDemo */;
+			targetProxy = 25A479DF1DDC7F5500AE2829 /* PBXContainerItemProxy */;
 		};
-		25A479AC1DDC7DE000AE2829 /* PBXTargetDependency */ = {
+		25A479EB1DDC7F5500AE2829 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 25A479851DDC7DE000AE2829 /* MJCPromptsMessageDemo */;
-			targetProxy = 25A479AB1DDC7DE000AE2829 /* PBXContainerItemProxy */;
+			target = 25A479C41DDC7F5500AE2829 /* MJCPromptsMessageDemo */;
+			targetProxy = 25A479EA1DDC7F5500AE2829 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		25A479921DDC7DE000AE2829 /* Main.storyboard */ = {
+		25A479D11DDC7F5500AE2829 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				25A479931DDC7DE000AE2829 /* Base */,
+				25A479D21DDC7F5500AE2829 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		25A479971DDC7DE000AE2829 /* LaunchScreen.storyboard */ = {
+		25A479D61DDC7F5500AE2829 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				25A479981DDC7DE000AE2829 /* Base */,
+				25A479D71DDC7F5500AE2829 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		25A479B11DDC7DE000AE2829 /* Debug */ = {
+		25A479F01DDC7F5500AE2829 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -377,7 +377,7 @@
 			};
 			name = Debug;
 		};
-		25A479B21DDC7DE000AE2829 /* Release */ = {
+		25A479F11DDC7F5500AE2829 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -418,29 +418,31 @@
 			};
 			name = Release;
 		};
-		25A479B41DDC7DE000AE2829 /* Debug */ = {
+		25A479F31DDC7F5500AE2829 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MJCPromptsMessageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.MJC.MJCPromptsMessageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		25A479B51DDC7DE000AE2829 /* Release */ = {
+		25A479F41DDC7F5500AE2829 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MJCPromptsMessageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.MJC.MJCPromptsMessageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		25A479B71DDC7DE000AE2829 /* Debug */ = {
+		25A479F61DDC7F5500AE2829 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,7 +454,7 @@
 			};
 			name = Debug;
 		};
-		25A479B81DDC7DE000AE2829 /* Release */ = {
+		25A479F71DDC7F5500AE2829 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,7 +466,7 @@
 			};
 			name = Release;
 		};
-		25A479BA1DDC7DE000AE2829 /* Debug */ = {
+		25A479F91DDC7F5500AE2829 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = MJCPromptsMessageDemoUITests/Info.plist;
@@ -475,7 +477,7 @@
 			};
 			name = Debug;
 		};
-		25A479BB1DDC7DE000AE2829 /* Release */ = {
+		25A479FA1DDC7F5500AE2829 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = MJCPromptsMessageDemoUITests/Info.plist;
@@ -489,40 +491,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25A479811DDC7DE000AE2829 /* Build configuration list for PBXProject "MJCPromptsMessageDemo" */ = {
+		25A479C01DDC7F5500AE2829 /* Build configuration list for PBXProject "MJCPromptsMessageDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25A479B11DDC7DE000AE2829 /* Debug */,
-				25A479B21DDC7DE000AE2829 /* Release */,
+				25A479F01DDC7F5500AE2829 /* Debug */,
+				25A479F11DDC7F5500AE2829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25A479B31DDC7DE000AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemo" */ = {
+		25A479F21DDC7F5500AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25A479B41DDC7DE000AE2829 /* Debug */,
-				25A479B51DDC7DE000AE2829 /* Release */,
+				25A479F31DDC7F5500AE2829 /* Debug */,
+				25A479F41DDC7F5500AE2829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		25A479B61DDC7DE000AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoTests" */ = {
+		25A479F51DDC7F5500AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25A479B71DDC7DE000AE2829 /* Debug */,
-				25A479B81DDC7DE000AE2829 /* Release */,
+				25A479F61DDC7F5500AE2829 /* Debug */,
+				25A479F71DDC7F5500AE2829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		25A479B91DDC7DE000AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoUITests" */ = {
+		25A479F81DDC7F5500AE2829 /* Build configuration list for PBXNativeTarget "MJCPromptsMessageDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25A479BA1DDC7DE000AE2829 /* Debug */,
-				25A479BB1DDC7DE000AE2829 /* Release */,
+				25A479F91DDC7F5500AE2829 /* Debug */,
+				25A479FA1DDC7F5500AE2829 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 25A4797E1DDC7DE000AE2829 /* Project object */;
+	rootObject = 25A479BD1DDC7F5500AE2829 /* Project object */;
 }
