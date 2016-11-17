@@ -10,4 +10,11 @@
     [MJCPromptsMessage showMessage:@"最新加载20条数据" msgHidden:NO];
     
     [MJCPromptsMessage showMessage:@"可传背景色和文字颜色和图片" backColor:[UIColor redColor] textColor:[UIColor purpleColor] image:[UIImage imageNamed:@"successwhite"] msgHidden:NO];
+    
+    [MJCPromptsMessage showAutoHiddenSuccess:@"求婚,成功了,偶也" messageStyle:MJCPromptsTypeWhite];
+    
+    
+    [MJCPromptsMessage showAutoHiddenError:@"高考,失败了,拜拜" messageStyle:MJCPromptsTypeWhite];
+    
+    [MJCPromptsMessage showLoading:@"高考成功,祝贺我,偶也" backColor:[UIColor redColor]];
 
