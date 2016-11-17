@@ -44,6 +44,9 @@
 		25A47A391DDD345D00AE2829 /* MJCLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A371DDD345D00AE2829 /* MJCLoadingVC.xib */; };
 		25A47A3D1DDD348100AE2829 /* MJCCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */; };
 		25A47A3E1DDD348100AE2829 /* MJCCustomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */; };
+		25A47A421DDDB72300AE2829 /* 成功与失败.gif in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A3F1DDDB72200AE2829 /* 成功与失败.gif */; };
+		25A47A431DDDB72300AE2829 /* 正在加载.gif in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A401DDDB72200AE2829 /* 正在加载.gif */; };
+		25A47A441DDDB72300AE2829 /* 自定义样式.gif in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A411DDDB72200AE2829 /* 自定义样式.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,9 @@
 		25A47A3A1DDD348100AE2829 /* MJCCustomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCCustomVC.h; sourceTree = "<group>"; };
 		25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCCustomVC.m; sourceTree = "<group>"; };
 		25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCCustomVC.xib; sourceTree = "<group>"; };
+		25A47A3F1DDDB72200AE2829 /* 成功与失败.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "成功与失败.gif"; sourceTree = "<group>"; };
+		25A47A401DDDB72200AE2829 /* 正在加载.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "正在加载.gif"; sourceTree = "<group>"; };
+		25A47A411DDDB72200AE2829 /* 自定义样式.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "自定义样式.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +190,9 @@
 		25A479C81DDC7F5500AE2829 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25A47A3F1DDDB72200AE2829 /* 成功与失败.gif */,
+				25A47A401DDDB72200AE2829 /* 正在加载.gif */,
+				25A47A411DDDB72200AE2829 /* 自定义样式.gif */,
 				25A479C91DDC7F5500AE2829 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -391,8 +400,11 @@
 				25A47A201DDC80A600AE2829 /* infoblack@3x.png in Resources */,
 				25A479D51DDC7F5500AE2829 /* Assets.xcassets in Resources */,
 				25A47A391DDD345D00AE2829 /* MJCLoadingVC.xib in Resources */,
+				25A47A441DDDB72300AE2829 /* 自定义样式.gif in Resources */,
+				25A47A431DDDB72300AE2829 /* 正在加载.gif in Resources */,
 				25A47A221DDC80A600AE2829 /* infowhite@2x.png in Resources */,
 				25A47A191DDC80A600AE2829 /* errorblack@2x.png in Resources */,
+				25A47A421DDDB72300AE2829 /* 成功与失败.gif in Resources */,
 				25A47A1D1DDC80A600AE2829 /* errorwhite@3x.png in Resources */,
 				25A479D31DDC7F5500AE2829 /* Main.storyboard in Resources */,
 				25A47A261DDC80A600AE2829 /* successblack@3x.png in Resources */,
