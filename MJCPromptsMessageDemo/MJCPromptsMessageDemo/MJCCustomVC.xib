@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MJCCustomVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewx-2t-pGU">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="q4l-e7-fN8"/>
+                    </constraints>
+                    <state key="normal" title="最普通的"/>
+                    <connections>
+                        <action selector="one4:" destination="-1" eventType="touchUpInside" id="q5f-nv-cAK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6p-I1-HHF">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3eR-F4-wP5"/>
+                    </constraints>
+                    <state key="normal" title="可传图,(自设置自动消失)"/>
+                    <connections>
+                        <action selector="three1:" destination="-1" eventType="touchUpInside" id="n6Z-gV-r4T"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-Ln-efs">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Kaj-BH-cjV"/>
+                    </constraints>
+                    <state key="normal" title="可传图,(自动消失)"/>
+                    <connections>
+                        <action selector="three2:" destination="-1" eventType="touchUpInside" id="fgB-gm-CeN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vw-7a-MD4">
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="50V-ha-bqm"/>
+                        <constraint firstAttribute="height" constant="50" id="taN-uX-Cnu"/>
+                    </constraints>
+                    <state key="normal" title="可传图片,可修改背景色,可设置自动消失"/>
+                    <connections>
+                        <action selector="three3:" destination="-1" eventType="touchUpInside" id="1LS-g6-Jv5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIo-EO-B8Q">
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="wK9-H2-ICN"/>
+                        <constraint firstAttribute="height" constant="50" id="xKg-IE-n1s"/>
+                    </constraints>
+                    <state key="normal" title="可传图片,可修改样式"/>
+                    <connections>
+                        <action selector="three4:" destination="-1" eventType="touchUpInside" id="do9-cH-HCH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXT-ht-q2i">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Nqq-UA-Lnx"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="hOp-UH-i1d"/>
+                    </constraints>
+                    <state key="normal" title="自定义MSG(可修改MSG位置和图片文字位置)"/>
+                    <connections>
+                        <action selector="three6:" destination="-1" eventType="touchUpInside" id="V5X-zv-Ozv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drD-vG-pbM">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="RSq-6x-vLg"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vbZ-16-jeN"/>
+                    </constraints>
+                    <state key="normal" title="自定义message"/>
+                    <connections>
+                        <action selector="three5:" destination="-1" eventType="touchUpInside" id="dbY-CK-8pS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Siw-9b-96R">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dST-RH-uUB"/>
+                    </constraints>
+                    <state key="normal" title="最普通(可设置是否自动消失)"/>
+                    <connections>
+                        <action selector="two4:" destination="-1" eventType="touchUpInside" id="lba-XM-6At"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3vw-7a-MD4" secondAttribute="trailing" id="5r4-Vh-kRU"/>
+                <constraint firstItem="VIo-EO-B8Q" firstAttribute="top" secondItem="3vw-7a-MD4" secondAttribute="bottom" constant="5" id="ELx-4W-QR3"/>
+                <constraint firstAttribute="trailing" secondItem="uXT-ht-q2i" secondAttribute="trailing" id="HiX-ce-rao"/>
+                <constraint firstItem="VIo-EO-B8Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hnp-Fj-i0r"/>
+                <constraint firstItem="ewx-2t-pGU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Kso-TL-f5I"/>
+                <constraint firstItem="fbK-Ln-efs" firstAttribute="top" secondItem="w6p-I1-HHF" secondAttribute="bottom" constant="10" id="NvO-AZ-388"/>
+                <constraint firstItem="drD-vG-pbM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ONv-zh-Yyt"/>
+                <constraint firstItem="uXT-ht-q2i" firstAttribute="top" secondItem="drD-vG-pbM" secondAttribute="bottom" constant="5" id="SYz-F5-gT2"/>
+                <constraint firstItem="fbK-Ln-efs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ta0-FK-jYF"/>
+                <constraint firstItem="Siw-9b-96R" firstAttribute="top" secondItem="ewx-2t-pGU" secondAttribute="bottom" constant="10" id="W6c-9g-hq0"/>
+                <constraint firstAttribute="trailing" secondItem="drD-vG-pbM" secondAttribute="trailing" id="X1M-2I-jVT"/>
+                <constraint firstAttribute="trailing" secondItem="Siw-9b-96R" secondAttribute="trailing" id="ash-7Z-quV"/>
+                <constraint firstItem="3vw-7a-MD4" firstAttribute="top" secondItem="fbK-Ln-efs" secondAttribute="bottom" constant="5" id="bs4-dQ-mEU"/>
+                <constraint firstAttribute="trailing" secondItem="w6p-I1-HHF" secondAttribute="trailing" id="fYm-pb-uPX"/>
+                <constraint firstAttribute="trailing" secondItem="fbK-Ln-efs" secondAttribute="trailing" id="hrj-gN-ex1"/>
+                <constraint firstItem="Siw-9b-96R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nom-1S-kPr"/>
+                <constraint firstItem="drD-vG-pbM" firstAttribute="top" secondItem="VIo-EO-B8Q" secondAttribute="bottom" constant="5" id="ok8-xp-DGe"/>
+                <constraint firstItem="uXT-ht-q2i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="prT-lB-04D"/>
+                <constraint firstItem="3vw-7a-MD4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uhC-Qv-WRz"/>
+                <constraint firstItem="w6p-I1-HHF" firstAttribute="top" secondItem="Siw-9b-96R" secondAttribute="bottom" constant="10" id="v7A-rf-E19"/>
+                <constraint firstAttribute="trailing" secondItem="VIo-EO-B8Q" secondAttribute="trailing" id="vD5-CU-oZe"/>
+                <constraint firstItem="w6p-I1-HHF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="x42-tH-Rx9"/>
+                <constraint firstAttribute="trailing" secondItem="ewx-2t-pGU" secondAttribute="trailing" id="yCP-Mc-UK4"/>
+                <constraint firstItem="ewx-2t-pGU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yCu-Ad-bOC"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

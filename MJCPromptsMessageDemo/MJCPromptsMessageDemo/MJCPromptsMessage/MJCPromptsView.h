@@ -12,8 +12,6 @@
 @interface MJCPromptsView : NSObject
 
 
-+(void)showWindow;
-
 +(void)showMessageColor:(UIColor *)messageColor;
 
 +(void)showMessageTextColor:(UIColor *)TextColor;
@@ -25,6 +23,14 @@
 +(void)showloading:(NSString *)loading textColor:(UIColor *)textColor;
 
 + (void)hideDismiss;
+
++(void)showMessageFrame:(CGRect)messageFrame;
+
++(void)showCustomFrame:(CGRect)customFrame;
+
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden;
+
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
 
 
 @end

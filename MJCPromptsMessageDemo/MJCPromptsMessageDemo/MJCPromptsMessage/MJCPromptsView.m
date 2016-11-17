@@ -30,9 +30,16 @@ static CGFloat const MJCAnimationDuration = 0.5;
 /** 间距 */
 static CGFloat const MJCMargin = 20;
 
+static CGFloat const MJCMarginTen = 10;
+
+
+static int number;
 
 ///** 全局的窗口 */
 static UIWindow *window;
+
+//
+static CGRect frames;
 
 ///** 定时器 */
 static NSTimer *timer;
@@ -41,35 +48,84 @@ static UIButton *button;
 
 static UILabel *label;
 
+static UIActivityIndicatorView *loadingView;
+
+static UIImageView *imageView;
+
 @interface MJCPromptsView ()
 
 @end
 
 @implementation MJCPromptsView
-/**
- * 创建显示窗口
- */
-+ (void)showWindow
+
+//设置自定义Message的位置
++(void)showCustomFrame:(CGRect)customFrame
+{
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        window.hidden = NO;//不隐藏
+        window.frame = customFrame;//并且重新赋值frame
+    }];
+}
+
+//开始位置
++(void)starFrame:(CGFloat)starFrame;
 {
     //窗口的frame
     CGFloat windowH = 50;
-    CGRect frame = CGRectMake(0,-windowH,MJCScreenWidth,windowH);
+    frames = CGRectMake(0,starFrame,MJCScreenWidth,windowH);
+    
+}
+//设置位置
++(void)showMessageFrame:(CGRect)messageFrame
+{
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        window.hidden = NO;//不隐藏
+        window.frame = messageFrame;//并且重新赋值frame
+    }];
+    
+    button.frame = window.bounds;
+    imageView.mjc_width = window.mjc_height * 0.5;
+    imageView.mjc_height = imageView.mjc_width;
+    imageView.mjc_x = MJCMarginTen;
+    CGFloat centerY = window.mjc_height * 0.5;//Y值中心点,等于窗口的高度的一半那个位置
+    imageView.mjc_centerY = centerY;
+    
+    label.mjc_x =(imageView.mjc_width + MJCMarginTen)+MJCMarginTen;
+    label.mjc_y = 0;
+    label.mjc_width = window.mjc_width - (imageView.mjc_width + 10+10+10);
+    label.mjc_height = window.mjc_height;
+}
+
+/**
+ * 创建显示窗口
+ */
++ (void)showWindow:(CGFloat)starFrame;
+{
+    //起始位置
+    [self starFrame:starFrame];
     
     //创建窗口
     window = [[UIWindow alloc] init];
     window.hidden = YES;//初始隐藏
+    window.windowLevel = UIWindowLevelAlert;//窗口显示位置
+    window.frame = frames;//窗口的frame,当我们创建的时候,将y值等于负的,也就是在超过了窗口的大小位置
     
     [self showMessageColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
-    
-    window.windowLevel = UIWindowLevelAlert;//窗口显示位置
-    window.frame = frame;//窗口的frame,当我们创建的时候,将y值等于负的,也就是在超过了窗口的大小位置
-    
+        
     // 动画效果
-    frame.origin.y = 64;//在这将frame的y值,再调为,我们所想要的位置
-    [UIView animateWithDuration:MJCAnimationDuration animations:^{
-        window.hidden = NO;//不隐藏
-        window.frame = frame;//并且重新赋值frame
-    }];
+    frames.origin.y = 64;//在这将frame的y值,再调为,我们所想要的位置
+    
+    if (number == 1) {
+        [self showMessageFrame:frames];
+    }else{
+        [self showCustomFrame:frames];
+    }
+    
+//    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+//        window.hidden = NO;//不隐藏
+//        window.frame = frame;//并且重新赋值frame
+//        [self showMessageFrame:frame];
+//    }];
 }
 
 // !!!:颜色
@@ -77,13 +133,12 @@ static UILabel *label;
 {
     window.backgroundColor = messageColor;
 }
-
+// 设置图片
 +(void)showMessageImage:(UIImage *)image
 {
     [button setImage:image forState:UIControlStateNormal];
 }
-
-
+//设置颜色
 +(void)showMessageTextColor:(UIColor *)TextColor
 {
     [button setTitleColor:TextColor forState:UIControlStateNormal];
@@ -91,14 +146,16 @@ static UILabel *label;
     label.textColor = TextColor;
 }
 
-// !!!:显示普通信息(带有图片和文字,自动消失)
+// !!!:显示普通信息
 + (void)showAutoMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden;
 {
+    number = 1;
+    
     //停止定时器
     [timer invalidate];
     
     // 显示窗口
-    [self showWindow];
+    [self showWindow:-64];
     
     // 添加按钮
     button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -110,8 +167,6 @@ static UILabel *label;
     //设置按钮的文字
     [button setTitle:msg forState:UIControlStateNormal];
     
-    
-    
     [self showMessageTextColor:textColor];
     //按钮文字大小
     button.titleLabel.font = MJCMessageFont;
@@ -122,9 +177,11 @@ static UILabel *label;
         
         //修改文字内边距位置
         button.titleEdgeInsets = UIEdgeInsetsMake(0,10, 0, 0);
+        
     }
     //按钮的位置
     button.frame = window.bounds;
+    
     [window addSubview:button];
     
     
@@ -141,12 +198,14 @@ static UILabel *label;
 //显示加载信息
 +(void)showloading:(NSString *)loading textColor:(UIColor *)textColor
 {
+    number = 1;
+    
     // 停止定时器
     [timer invalidate];
     timer = nil;
     
     // 显示窗口
-    [self showWindow];
+    [self showWindow:-64];
     
     // 创建lable
     label = [[UILabel alloc] init];
@@ -154,15 +213,21 @@ static UILabel *label;
     label.frame = window.bounds;
     label.textAlignment = NSTextAlignmentCenter;
     
-    if (loading == kNilOptions) {
-        label.text = @"正在加载中...";
-    }else{
-        if ([loading  isEqual: @""]) {
-            label.text = @"正在加载中...";
-        }else{
-            label.text = loading;
-        }
-    }
+//    label.userInteractionEnabled = YES;
+//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideDismiss)];
+//    [label addGestureRecognizer:tapGesture];
+    
+//    if (loading == kNilOptions) {
+//        label.text = @"正在加载中...";
+//    }else{
+//        if ([loading  isEqual: @""]) {
+//            label.text = @"正在加载中...";
+//        }else{
+//            
+//        }
+//    }
+    
+    label.text = loading;
     
     [self showMessageTextColor:textColor];
     
@@ -195,6 +260,96 @@ static UILabel *label;
         window = nil;//直接将窗口为空
         timer = nil;//定时器为空
     }];
+}
+
+
+// !!!:显示普通信息
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden
+{
+    number = 1;
+    
+    //停止定时器
+    [timer invalidate];
+    // 显示窗口
+    //    [self showWindow];
+    [self showWindow:-64];
+    
+    // 添加图片
+    imageView = [[UIImageView alloc] init];
+    imageView.image = image;
+    imageView.mjc_width = window.mjc_height * 0.5;
+    imageView.mjc_height = imageView.mjc_width;
+    imageView.mjc_x = MJCMarginTen;
+    //Y值中心点,等于窗口的高度的一半那个位置
+    imageView.mjc_centerY = window.mjc_height * 0.5;;
+    [window addSubview:imageView];
+    
+    // 创建lable
+    label = [[UILabel alloc] init];
+    [self showMessageTextColor:textColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont systemFontOfSize:12];
+    label.textAlignment = NSTextAlignmentLeft;//文字向左对齐
+    label.text = msg;
+    label.numberOfLines = 0;//行数
+    label.mjc_x =(imageView.mjc_width + MJCMarginTen)+MJCMarginTen;
+    label.mjc_y = 0;
+    label.mjc_width = window.mjc_width - (imageView.mjc_width + 10+10+10);
+    label.mjc_height = window.mjc_height;
+    
+    label.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideDismiss)];
+    [label addGestureRecognizer:tapGesture];
+    
+    [window addSubview:label];
+    
+    if (msgHidden == YES) {
+        // 定时器方法
+        timer = [NSTimer scheduledTimerWithTimeInterval:MJCMessageDuration target:self selector:@selector(hideDismiss) userInfo:nil repeats:NO];
+    }else{
+        [timer invalidate];
+    }
+
+}
+
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
+{
+    number = 2;
+    
+    //停止定时器
+    [timer invalidate];
+    // 显示窗口
+    //    [self showWindow];
+    [self showWindow:-64];
+    
+    // 添加图片
+    imageView = [[UIImageView alloc] init];
+    imageView.image = image;
+    imageView.frame = imageFrame;
+    [window addSubview:imageView];
+    
+    // 创建lable
+    label = [[UILabel alloc] init];
+    [self showMessageTextColor:textColor];
+    label.backgroundColor = [UIColor redColor];
+    label.font = [UIFont systemFontOfSize:12];
+    label.textAlignment = NSTextAlignmentLeft;//文字向左对齐
+    label.text = msg;
+    label.numberOfLines = 0;//行数
+    label.frame = lableFrame;
+    label.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideDismiss)];
+    [label addGestureRecognizer:tapGesture];
+    
+    [window addSubview:label];
+    
+    if (msgHidden == YES) {
+        // 定时器方法
+        timer = [NSTimer scheduledTimerWithTimeInterval:MJCMessageDuration target:self selector:@selector(hideDismiss) userInfo:nil repeats:NO];
+    }else{
+        [timer invalidate];
+    }
+
 }
 
 

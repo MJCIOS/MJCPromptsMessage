@@ -36,6 +36,14 @@
 		25A47A271DDC80A600AE2829 /* successwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A151DDC80A600AE2829 /* successwhite.png */; };
 		25A47A281DDC80A600AE2829 /* successwhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A161DDC80A600AE2829 /* successwhite@2x.png */; };
 		25A47A291DDC80A600AE2829 /* successwhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A171DDC80A600AE2829 /* successwhite@3x.png */; };
+		25A47A2E1DDD33E200AE2829 /* MJCSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A2C1DDD33E200AE2829 /* MJCSuccessVC.m */; };
+		25A47A2F1DDD33E200AE2829 /* MJCSuccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A2D1DDD33E200AE2829 /* MJCSuccessVC.xib */; };
+		25A47A331DDD344500AE2829 /* MJCErrorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A311DDD344500AE2829 /* MJCErrorVC.m */; };
+		25A47A341DDD344500AE2829 /* MJCErrorVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A321DDD344500AE2829 /* MJCErrorVC.xib */; };
+		25A47A381DDD345D00AE2829 /* MJCLoadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A361DDD345D00AE2829 /* MJCLoadingVC.m */; };
+		25A47A391DDD345D00AE2829 /* MJCLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A371DDD345D00AE2829 /* MJCLoadingVC.xib */; };
+		25A47A3D1DDD348100AE2829 /* MJCCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */; };
+		25A47A3E1DDD348100AE2829 /* MJCCustomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +104,18 @@
 		25A47A151DDC80A600AE2829 /* successwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = successwhite.png; sourceTree = "<group>"; };
 		25A47A161DDC80A600AE2829 /* successwhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "successwhite@2x.png"; sourceTree = "<group>"; };
 		25A47A171DDC80A600AE2829 /* successwhite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "successwhite@3x.png"; sourceTree = "<group>"; };
+		25A47A2B1DDD33E200AE2829 /* MJCSuccessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCSuccessVC.h; sourceTree = "<group>"; };
+		25A47A2C1DDD33E200AE2829 /* MJCSuccessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCSuccessVC.m; sourceTree = "<group>"; };
+		25A47A2D1DDD33E200AE2829 /* MJCSuccessVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCSuccessVC.xib; sourceTree = "<group>"; };
+		25A47A301DDD344500AE2829 /* MJCErrorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCErrorVC.h; sourceTree = "<group>"; };
+		25A47A311DDD344500AE2829 /* MJCErrorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCErrorVC.m; sourceTree = "<group>"; };
+		25A47A321DDD344500AE2829 /* MJCErrorVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCErrorVC.xib; sourceTree = "<group>"; };
+		25A47A351DDD345D00AE2829 /* MJCLoadingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCLoadingVC.h; sourceTree = "<group>"; };
+		25A47A361DDD345D00AE2829 /* MJCLoadingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCLoadingVC.m; sourceTree = "<group>"; };
+		25A47A371DDD345D00AE2829 /* MJCLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCLoadingVC.xib; sourceTree = "<group>"; };
+		25A47A3A1DDD348100AE2829 /* MJCCustomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCCustomVC.h; sourceTree = "<group>"; };
+		25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCCustomVC.m; sourceTree = "<group>"; };
+		25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCCustomVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +166,7 @@
 		25A479C71DDC7F5500AE2829 /* MJCPromptsMessageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				25A47A2A1DDD33C300AE2829 /* 控制器 */,
 				25A479FB1DDC803100AE2829 /* MJCPromptsMessage */,
 				25A479CB1DDC7F5500AE2829 /* AppDelegate.h */,
 				25A479CC1DDC7F5500AE2829 /* AppDelegate.m */,
@@ -223,6 +244,25 @@
 				25A47A171DDC80A600AE2829 /* successwhite@3x.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		25A47A2A1DDD33C300AE2829 /* 控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				25A47A2B1DDD33E200AE2829 /* MJCSuccessVC.h */,
+				25A47A2C1DDD33E200AE2829 /* MJCSuccessVC.m */,
+				25A47A2D1DDD33E200AE2829 /* MJCSuccessVC.xib */,
+				25A47A301DDD344500AE2829 /* MJCErrorVC.h */,
+				25A47A311DDD344500AE2829 /* MJCErrorVC.m */,
+				25A47A321DDD344500AE2829 /* MJCErrorVC.xib */,
+				25A47A351DDD345D00AE2829 /* MJCLoadingVC.h */,
+				25A47A361DDD345D00AE2829 /* MJCLoadingVC.m */,
+				25A47A371DDD345D00AE2829 /* MJCLoadingVC.xib */,
+				25A47A3A1DDD348100AE2829 /* MJCCustomVC.h */,
+				25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */,
+				25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */,
+			);
+			name = "控制器";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,14 +379,18 @@
 				25A47A251DDC80A600AE2829 /* successblack@2x.png in Resources */,
 				25A47A291DDC80A600AE2829 /* successwhite@3x.png in Resources */,
 				25A47A231DDC80A600AE2829 /* infowhite@3x.png in Resources */,
+				25A47A3E1DDD348100AE2829 /* MJCCustomVC.xib in Resources */,
 				25A47A1C1DDC80A600AE2829 /* errorwhite@2x .png in Resources */,
 				25A47A1B1DDC80A600AE2829 /* errorwhite.png in Resources */,
 				25A47A211DDC80A600AE2829 /* infowhite.png in Resources */,
+				25A47A2F1DDD33E200AE2829 /* MJCSuccessVC.xib in Resources */,
 				25A47A281DDC80A600AE2829 /* successwhite@2x.png in Resources */,
+				25A47A341DDD344500AE2829 /* MJCErrorVC.xib in Resources */,
 				25A479D81DDC7F5500AE2829 /* LaunchScreen.storyboard in Resources */,
 				25A47A241DDC80A600AE2829 /* successblack.png in Resources */,
 				25A47A201DDC80A600AE2829 /* infoblack@3x.png in Resources */,
 				25A479D51DDC7F5500AE2829 /* Assets.xcassets in Resources */,
+				25A47A391DDD345D00AE2829 /* MJCLoadingVC.xib in Resources */,
 				25A47A221DDC80A600AE2829 /* infowhite@2x.png in Resources */,
 				25A47A191DDC80A600AE2829 /* errorblack@2x.png in Resources */,
 				25A47A1D1DDC80A600AE2829 /* errorwhite@3x.png in Resources */,
@@ -380,6 +424,10 @@
 				25A479D01DDC7F5500AE2829 /* ViewController.m in Sources */,
 				25A479CD1DDC7F5500AE2829 /* AppDelegate.m in Sources */,
 				25A47A041DDC803100AE2829 /* UIView+MJCExtenSion.m in Sources */,
+				25A47A331DDD344500AE2829 /* MJCErrorVC.m in Sources */,
+				25A47A2E1DDD33E200AE2829 /* MJCSuccessVC.m in Sources */,
+				25A47A3D1DDD348100AE2829 /* MJCCustomVC.m in Sources */,
+				25A47A381DDD345D00AE2829 /* MJCLoadingVC.m in Sources */,
 				25A47A021DDC803100AE2829 /* MJCPromptsMessage.m in Sources */,
 				25A479CA1DDC7F5500AE2829 /* main.m in Sources */,
 			);

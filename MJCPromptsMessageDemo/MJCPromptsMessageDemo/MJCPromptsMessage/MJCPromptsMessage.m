@@ -20,6 +20,7 @@ static int imageInter;
 
 @implementation MJCPromptsMessage
 
+//修改成功和失败的图片颜色样式
 +(void)showPromptsTypeStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 {
     if (MJCPromptsTypeStyle == MJCPromptsTypeblack) {
@@ -29,11 +30,10 @@ static int imageInter;
     }else{
         [MJCPromptsView showMessageColor:[[UIColor whiteColor]colorWithAlphaComponent:0.5]];
         [MJCPromptsView showMessageTextColor:[UIColor blackColor]];
-        [self setupshowMessageImage:@"success" errorImage:@"error"];
+        [self setupshowMessageImage:@"successblack" errorImage:@"errorblack"];
     }
-
 }
-
+//修改Message样式
 +(void)showPromptsMessagesStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
 {
     if (MJCPromptsMessagesStyle == MJCPromptsMessagesblack) {
@@ -45,10 +45,17 @@ static int imageInter;
     }
 }
 
+/**
+ * 修改MessageFrame
+ */
++(void)showMessageFrame:(CGRect)messageFrame;
+{
+    [MJCPromptsView showMessageFrame:messageFrame];
+}
+
 // !!!:背景颜色
 +(void)showMessageColor:(UIColor *)messageColor;
 {
-    
     [MJCPromptsView showMessageColor:messageColor];
 }
 // !!!:文字颜色
@@ -57,14 +64,19 @@ static int imageInter;
     [MJCPromptsView showMessageColor:textColor];
 }
 
-
 #pragma mark !!!:显示普通信息
++ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
+{
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil msgHidden:YES];
+}
 // 显示文字和图片信息(带有图片和文字,自动消失)
-+ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image
++(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden;
 {    
     [MJCPromptsView showAutoMessage:msg image:image textColor:nil msgHidden:YES];
     
     [self showPromptsMessagesStyle:MJCPromptsMessagesblack];
+    
+    [MJCPromptsView showMessageTextColor:textColor];
 }
 // 显示文字和图片信息(可添加文字,图片,是否隐藏,可修改类型)
 +(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
@@ -73,12 +85,6 @@ static int imageInter;
     
     [self showPromptsMessagesStyle:MJCPromptsMessagesStyle];
     
-}
-// 显示文字和图片信息(可添加文字,图片,是否隐藏,可修改背景色)
-+(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor image:(UIImage *)image  msgHidden:(BOOL)msgHidden;
-{
-    [self showMessage:msg image:image msgHidden:msgHidden];
-    [self showMessageColor:backColor];
 }
 
 // 显示文字和图片信息(带有文字和图片的)(是否自动消失)
@@ -92,6 +98,7 @@ static int imageInter;
         [self showPromptsTypeStyle:MJCPromptsTypeblack];
     }
 }
+
 // 显示普通信息(,自动消失)
 + (void)showAutoHiddenMessage:(NSString *)msg
 {
@@ -110,6 +117,17 @@ static int imageInter;
 }
 
 #pragma mark !!!:提显示成功信息
+// 提显示成功信息(成功背景色,成功文字,成功图片)
++(void)showAutoHiddenSuccess:(NSString *)successmsg backColor:(UIColor *)backColor successImage:(UIImage *)successImage
+{
+    [self showAutoHiddenSuccess:successmsg];
+    
+    [MJCPromptsView showMessageColor:backColor];
+    
+    [MJCPromptsView showMessageImage:successImage];
+}
+
+
 // 提显示成功信息
 +(void)showAutoHiddenSuccess:(NSString *)successmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle
 {
@@ -134,9 +152,18 @@ static int imageInter;
     [self showPromptsTypeStyle:MJCPromptsTypeblack];
 }
 
-
 #pragma mark !!!:显示失败信息
-// 显示失败信息
+// 显示失败信息(背景色,失败图片)
++(void)showAutoHiddenError:(NSString *)errormsg backColor:(UIColor *)backColor errorImage:(UIImage *)errorImage;
+{
+    [self showAutoHiddenError:errormsg];
+    
+    [MJCPromptsView showMessageColor:backColor];
+    
+    [MJCPromptsView showMessageImage:errorImage];
+}
+
+// 显示失败信息(修改样式)
 +(void)showAutoHiddenError:(NSString *)errormsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle
 {
     [self showAutoHiddenError:errormsg];
@@ -160,6 +187,14 @@ static int imageInter;
 
 
 #pragma mark !!!:正在加载信息
+// 正在加载信息(自动消失,背景颜色)
++(void)showLoading:(NSString *)loadingmsg backColor:(UIColor *)backColor;
+{
+    [self showLoading:loadingmsg];
+    
+    [MJCPromptsView showMessageColor:backColor];
+}
+// 正在加载信息(自动消失,样式)
 +(void)showLoading:(NSString *)loadingmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 {
     [self showLoading:loadingmsg];
@@ -180,7 +215,6 @@ static int imageInter;
     [self showLoading:@"正在加载中..."];
 }
 
-
 // !!!:隐藏指示栏
 + (void)hideDismiss
 {
@@ -197,6 +231,28 @@ static int imageInter;
     }else{
     }
 }
+
+/** 自定义Message的文字,图片,文字颜色,是否隐藏 */
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden;
+{
+    [MJCPromptsView showMessage:msg image:image textColor:textColor msgHidden:msgHidden];
+}
+
+/** 自定义Message的文字,图片,文字颜色,是否隐藏,图片位置和文字位置 */
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
+{
+    [MJCPromptsView showMessage:msg image:image textColor:textColor msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
+}
+
+/**
+ * 修改自定义Message的Frame
+ */
++(void)showMessageCustomFrame:(CGRect)customFrame
+{
+    [MJCPromptsView showCustomFrame:customFrame];
+}
+
+
 
 
 @end
