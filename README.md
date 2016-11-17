@@ -1,9 +1,9 @@
 # MJCPromptsMessage
 一款超轻量级广告或提示栏的窗口
 
-![image](https://github.com/MJCIOS/MJCPromptsMessage/MJCPromptsMessageDemo/MJCPromptsMessageDemo/成功与失败.gif)
-
-![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/成功与失败.gif)   
+![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/成功与失败.gif)
+![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/正在加载.gif)
+![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/自定义样式.gif)
 
 ###提示栏创建(一行代码即可使用)
     
