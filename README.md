@@ -3,6 +3,7 @@
 
 ![image](https://github.com/MJCIOS/MJCPromptsMessage/MJCPromptsMessageDemo/MJCPromptsMessageDemo/成功与失败.gif)
 
+![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/成功与失败.gif)   
 
 ###提示栏创建(一行代码即可使用)
     
