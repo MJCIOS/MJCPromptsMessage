@@ -17,4 +17,28 @@
     [MJCPromptsMessage showAutoHiddenError:@"高考,失败了,拜拜" messageStyle:MJCPromptsTypeWhite];
     
     [MJCPromptsMessage showLoading:@"高考成功,祝贺我,偶也" backColor:[UIColor redColor]];
+    
+    
+    
+    //添加子控件
+    UIView *view1 = [[UIView alloc]init];
+    view1.backgroundColor = [UIColor redColor];
+    view1.frame = CGRectMake(0, 0, 320, 50);
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor purpleColor];
+    [button addTarget:self action:@selector(disss) forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(40, 0, 100, 20);
+    [view1 addSubview:button];
+    
+    UILabel *lasdsa = [[UILabel alloc]init];
+    lasdsa.text = @"asdsadsadas";
+    lasdsa.textColor = [UIColor whiteColor];
+    lasdsa.backgroundColor = [UIColor blackColor];
+    lasdsa.frame = CGRectMake(0, 0, 50, 20);
+    [button addSubview:lasdsa];
+    
+    //自定义添加子控件上去
+    [MJCPromptsMessage addSubview:view1];
+
 
