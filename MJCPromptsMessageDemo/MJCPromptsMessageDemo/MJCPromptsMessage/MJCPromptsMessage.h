@@ -128,5 +128,7 @@ typedef enum {
  */
 + (void)showMessageCustomFrame:(CGRect)customFrame;
 
+/** 自定义添加子控件 */
++(void)addSubview:(UIView *)addControls;
 
 @end

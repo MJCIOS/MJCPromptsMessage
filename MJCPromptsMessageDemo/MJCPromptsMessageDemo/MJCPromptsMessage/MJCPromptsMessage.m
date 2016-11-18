@@ -252,7 +252,11 @@ static int imageInter;
     [MJCPromptsView showCustomFrame:customFrame];
 }
 
-
+/** 添加子控件 */
++(void)addSubview:(UIView *)addControls
+{
+    [MJCPromptsView windowAddSubview:addControls];
+}
 
 
 @end

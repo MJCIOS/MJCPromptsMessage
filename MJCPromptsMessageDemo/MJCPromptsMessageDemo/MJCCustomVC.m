@@ -73,6 +73,36 @@
 
 
 
+- (IBAction)customButton1:(id)sender {
+    UIView *view1 = [[UIView alloc]init];
+    view1.backgroundColor = [UIColor redColor];
+    view1.frame = CGRectMake(0, 0, 320, 50);
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor purpleColor];
+    [button addTarget:self action:@selector(disss) forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(40, 0, 100, 20);
+    [view1 addSubview:button];
+    
+    UILabel *lasdsa = [[UILabel alloc]init];
+    lasdsa.text = @"asdsadsadas";
+    lasdsa.textColor = [UIColor whiteColor];
+    lasdsa.backgroundColor = [UIColor blackColor];
+    lasdsa.frame = CGRectMake(0, 0, 50, 20);
+    [button addSubview:lasdsa];
+    
+    [MJCPromptsMessage addSubview:view1];
+    
+    //修改位置大小
+    [MJCPromptsMessage showMessageCustomFrame:CGRectMake(0, 0,self.view.mjc_width, 100)];
+    
+    
+}
+
+-(void)disss
+{
+    [MJCPromptsMessage hideDismiss];
+}
 
 
 

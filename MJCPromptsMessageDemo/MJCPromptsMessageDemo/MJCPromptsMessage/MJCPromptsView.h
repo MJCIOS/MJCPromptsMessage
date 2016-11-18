@@ -32,5 +32,6 @@
 
 + (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
 
++(void)windowAddSubview:(UIView *)addControls;
 
 @end

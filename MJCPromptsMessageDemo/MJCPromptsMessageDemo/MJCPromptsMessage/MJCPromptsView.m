@@ -67,6 +67,15 @@ static UIImageView *imageView;
     }];
 }
 
++(void)windowAddSubview:(UIView *)addControls
+{
+    //起始位置
+    [self showWindow:-64];
+    
+    [window addSubview:addControls];
+}
+
+
 //开始位置
 +(void)starFrame:(CGFloat)starFrame;
 {

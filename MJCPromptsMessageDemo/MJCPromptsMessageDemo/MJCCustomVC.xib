@@ -92,14 +92,22 @@
                         <action selector="two4:" destination="-1" eventType="touchUpInside" id="lba-XM-6At"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFI-fE-abf">
+                    <state key="normal" title="自定义添加控件上去"/>
+                    <connections>
+                        <action selector="customButton1:" destination="-1" eventType="touchUpInside" id="49T-UX-nNR"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="3vw-7a-MD4" secondAttribute="trailing" id="5r4-Vh-kRU"/>
+                <constraint firstAttribute="trailing" secondItem="EFI-fE-abf" secondAttribute="trailing" id="8wX-bI-xvl"/>
                 <constraint firstItem="VIo-EO-B8Q" firstAttribute="top" secondItem="3vw-7a-MD4" secondAttribute="bottom" constant="5" id="ELx-4W-QR3"/>
                 <constraint firstAttribute="trailing" secondItem="uXT-ht-q2i" secondAttribute="trailing" id="HiX-ce-rao"/>
                 <constraint firstItem="VIo-EO-B8Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hnp-Fj-i0r"/>
                 <constraint firstItem="ewx-2t-pGU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Kso-TL-f5I"/>
+                <constraint firstItem="EFI-fE-abf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MKo-uc-2We"/>
                 <constraint firstItem="fbK-Ln-efs" firstAttribute="top" secondItem="w6p-I1-HHF" secondAttribute="bottom" constant="10" id="NvO-AZ-388"/>
                 <constraint firstItem="drD-vG-pbM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ONv-zh-Yyt"/>
                 <constraint firstItem="uXT-ht-q2i" firstAttribute="top" secondItem="drD-vG-pbM" secondAttribute="bottom" constant="5" id="SYz-F5-gT2"/>
@@ -113,6 +121,7 @@
                 <constraint firstItem="Siw-9b-96R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nom-1S-kPr"/>
                 <constraint firstItem="drD-vG-pbM" firstAttribute="top" secondItem="VIo-EO-B8Q" secondAttribute="bottom" constant="5" id="ok8-xp-DGe"/>
                 <constraint firstItem="uXT-ht-q2i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="prT-lB-04D"/>
+                <constraint firstItem="EFI-fE-abf" firstAttribute="top" secondItem="uXT-ht-q2i" secondAttribute="bottom" id="siR-j5-KDv"/>
                 <constraint firstItem="3vw-7a-MD4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uhC-Qv-WRz"/>
                 <constraint firstItem="w6p-I1-HHF" firstAttribute="top" secondItem="Siw-9b-96R" secondAttribute="bottom" constant="10" id="v7A-rf-E19"/>
                 <constraint firstAttribute="trailing" secondItem="VIo-EO-B8Q" secondAttribute="trailing" id="vD5-CU-oZe"/>
