@@ -1,5 +1,5 @@
 # MJCPromptsMessage
-一款超轻量级广告或提示栏的窗口
+一款超轻量级广告或提示栏的窗口,如果你重复点击,它也不会重复创建N多个提示栏,每次创建新的提示栏,都会自动销毁上一个提示栏...
 
 ![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/成功与失败.gif)
 ![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/正在加载.gif)
