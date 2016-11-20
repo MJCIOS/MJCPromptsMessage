@@ -5,7 +5,7 @@
 ![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/正在加载.gif)
 ![image](https://github.com/MJCIOS/MJCPromptsMessage/raw/master/MJCPromptsMessageDemo/MJCPromptsMessageDemo/自定义样式.gif)
 
-###提示栏创建(一行代码即可使用)
+###提示栏创建(一行代码即可使用)提供了很多方法,也可自行修改尺寸位置,可自行添加子控件上去,具体方法,进入.h文件看下
     
     [MJCPromptsMessage showMessage:@"最新加载20条数据" msgHidden:NO];
     
