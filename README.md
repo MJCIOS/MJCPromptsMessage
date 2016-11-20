@@ -39,6 +39,6 @@
     [button addSubview:lasdsa];
     
     //自定义添加子控件上去
-    [MJCPromptsMessage addSubview:view1];
+    [MJCPromptsMessage mjc_addSubview:view1];
 
 
