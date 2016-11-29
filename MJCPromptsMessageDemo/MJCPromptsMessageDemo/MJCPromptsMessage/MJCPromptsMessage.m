@@ -67,12 +67,12 @@ static int imageInter;
 #pragma mark !!!:显示普通信息
 + (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
 {
-    [MJCPromptsView showAutoMessage:msg image:image textColor:nil msgHidden:YES];
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:YES];
 }
 // 显示文字和图片信息(带有图片和文字,自动消失)
 +(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden;
-{    
-    [MJCPromptsView showAutoMessage:msg image:image textColor:nil msgHidden:YES];
+{
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:msgHidden];
     
     [self showPromptsMessagesStyle:MJCPromptsMessagesblack];
     
@@ -94,7 +94,8 @@ static int imageInter;
         [self showAutoHiddenMessage:msg image:image];
     
     }else{
-        [MJCPromptsView showAutoMessage:msg image:image textColor:nil msgHidden:msgHidden];
+        [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:msgHidden];
+        
         [self showPromptsTypeStyle:MJCPromptsTypeblack];
     }
 }
@@ -111,7 +112,7 @@ static int imageInter;
         [self showAutoHiddenMessage:msg image:nil];
         
     }else{
-        [MJCPromptsView showAutoMessage:msg image:nil textColor:nil msgHidden:msgHidden];
+        [MJCPromptsView showAutoMessage:msg image:nil textColor:nil starFrame:-64 msgHidden:msgHidden];
         [self showPromptsTypeStyle:MJCPromptsTypeblack];
     }
 }
@@ -233,16 +234,30 @@ static int imageInter;
 }
 
 /** 自定义Message的文字,图片,文字颜色,是否隐藏 */
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
+{
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:starFrame msgHidden:msgHidden];
+}
+
 + (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden;
 {
-    [MJCPromptsView showMessage:msg image:image textColor:textColor msgHidden:msgHidden];
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden];
 }
+
 
 /** 自定义Message的文字,图片,文字颜色,是否隐藏,图片位置和文字位置 */
 + (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
 {
-    [MJCPromptsView showMessage:msg image:image textColor:textColor msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
 }
+
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
+{
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:starFrame msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
+}
+
+
+
 
 /**
  * 修改自定义Message的Frame
@@ -253,9 +268,16 @@ static int imageInter;
 }
 
 /** 添加子控件 */
-+(void)addSubview:(UIView *)addControls
++(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls
 {
-    [MJCPromptsView windowAddSubview:addControls];
+    [MJCPromptsView windowAddSubview:starFrame addControls:addControls];
+}
+
++(void)setupMessageFrame
+{
+    
+    
+    
 }
 
 

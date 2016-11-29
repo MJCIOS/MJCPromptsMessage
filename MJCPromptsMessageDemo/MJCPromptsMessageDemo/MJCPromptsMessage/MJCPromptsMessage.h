@@ -10,6 +10,10 @@
 #import <UIKit/UIKit.h>
 #import "UIView+MJCExtenSion.h"
 
+//整个屏幕宽度
+#define MJCScreenWidth [UIScreen mainScreen].bounds.size.width
+
+
 typedef enum {
     MJCPromptsTypeblack,
     MJCPromptsTypeWhite
@@ -119,8 +123,15 @@ typedef enum {
 /** 自定义Message的文字,图片,文字颜色,是否隐藏 */
 + (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden;
 
+/** 自定义Message的文字,图片,文字颜色,是否隐藏,图片位置和文字位置 可设置起始位置 */
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
+
 /** 自定义Message的文字,图片,文字颜色,是否隐藏,图片位置和文字位置 */
 + (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
+
+/** 自定义Message的文字,图片,文字颜色,是否隐藏,图片位置和文字位置 可设置起始位置 */
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
+
 
 
 /**
@@ -129,6 +140,6 @@ typedef enum {
 + (void)showMessageCustomFrame:(CGRect)customFrame;
 
 /** 自定义添加子控件 */
-+(void)addSubview:(UIView *)addControls;
++(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls;
 
 @end

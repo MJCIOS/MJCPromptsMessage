@@ -74,6 +74,7 @@
 
 
 - (IBAction)customButton1:(id)sender {
+    
     UIView *view1 = [[UIView alloc]init];
     view1.backgroundColor = [UIColor redColor];
     view1.frame = CGRectMake(0, 0, 320, 50);
@@ -91,10 +92,10 @@
     lasdsa.frame = CGRectMake(0, 0, 50, 20);
     [button addSubview:lasdsa];
     
-    [MJCPromptsMessage addSubview:view1];
+    [MJCPromptsMessage windowAddSubview:100 addControls:view1];
     
     //修改位置大小
-    [MJCPromptsMessage showMessageCustomFrame:CGRectMake(0, 0,self.view.mjc_width, 100)];
+    [MJCPromptsMessage showMessageCustomFrame:CGRectMake(0, 200,self.view.mjc_width, 100)];
     
     
 }

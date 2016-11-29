@@ -41,8 +41,13 @@
 
 - (IBAction)four:(id)sender {
 
-    [MJCPromptsMessage showAutoHiddenSuccess:@"求婚,成功了,红红火火,红红火火,红红火火" backColor:[UIColor redColor] successImage:[UIImage imageNamed:@"infoblack@2x"]];
+//    [MJCPromptsMessage showAutoHiddenSuccess:@"求婚,成功了,红红火火,红红火火,红红火火" backColor:[UIColor redColor] successImage:[UIImage imageNamed:@"infoblack@2x"]];
 
+    
+//    [MJCPromptsMessage showMessageFrame:CGRectMake(0,100, MJCScreenWidth,100)];
+    
+    [MJCPromptsMessage showCustomMessage:@"asdasdasd" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor redColor] starFrame:-10 msgHidden:YES];
+    
 }
 - (IBAction)yincang:(id)sender {
     

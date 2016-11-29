@@ -67,23 +67,15 @@ static UIImageView *imageView;
     }];
 }
 
-+(void)windowAddSubview:(UIView *)addControls
++(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls
 {
     //起始位置
-    [self showWindow:-64];
+    [self showWindow:starFrame];
     
     [window addSubview:addControls];
 }
 
 
-//开始位置
-+(void)starFrame:(CGFloat)starFrame;
-{
-    //窗口的frame
-    CGFloat windowH = 50;
-    frames = CGRectMake(0,starFrame,MJCScreenWidth,windowH);
-    
-}
 //设置位置
 +(void)showMessageFrame:(CGRect)messageFrame
 {
@@ -110,8 +102,9 @@ static UIImageView *imageView;
  */
 + (void)showWindow:(CGFloat)starFrame;
 {
-    //起始位置
-    [self starFrame:starFrame];
+    //窗口的frame
+    CGFloat windowH = 50;
+    frames = CGRectMake(0,starFrame,MJCScreenWidth,windowH);
     
     //创建窗口
     window = [[UIWindow alloc] init];
@@ -156,7 +149,7 @@ static UIImageView *imageView;
 }
 
 // !!!:显示普通信息
-+ (void)showAutoMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden;
++ (void)showAutoMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
 {
     number = 1;
     
@@ -164,7 +157,7 @@ static UIImageView *imageView;
     [timer invalidate];
     
     // 显示窗口
-    [self showWindow:-64];
+    [self showWindow:starFrame];
     
     // 添加按钮
     button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -273,7 +266,7 @@ static UIImageView *imageView;
 
 
 // !!!:显示普通信息
-+ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden
 {
     number = 1;
     
@@ -281,7 +274,7 @@ static UIImageView *imageView;
     [timer invalidate];
     // 显示窗口
     //    [self showWindow];
-    [self showWindow:-64];
+    [self showWindow:starFrame];
     
     // 添加图片
     imageView = [[UIImageView alloc] init];
@@ -321,7 +314,8 @@ static UIImageView *imageView;
 
 }
 
-+ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
+
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
 {
     number = 2;
     
@@ -329,7 +323,7 @@ static UIImageView *imageView;
     [timer invalidate];
     // 显示窗口
     //    [self showWindow];
-    [self showWindow:-64];
+    [self showWindow:starFrame];
     
     // 添加图片
     imageView = [[UIImageView alloc] init];
