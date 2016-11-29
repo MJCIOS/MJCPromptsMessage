@@ -40,6 +40,48 @@ typedef enum {
 
 #pragma mark -- 提示图片或文字信息
 /**
+ * 提示信息(可修改背景色,文字颜色,图片,文字,是否隐藏)
+ */
++(void)showMessage:(NSString *)msg
+         backColor:(UIColor *)backColor
+         textColor:(UIColor *)textColor
+             image:(UIImage *)image
+         msgHidden:(BOOL)msgHidden
+         starFrame:(CGFloat)starFrame
+      messageFrame:(CGRect)messageFrame;
+
+/**
+ * 提示信息(可修改,类型,图片,文字,是否隐藏)
+ */
++(void)showMessage:(NSString *)msg
+             image:(UIImage *)image
+        autoHidden:(BOOL)autoHidden
+         starFrame:(CGFloat)starFrame
+      messageFrame:(CGRect)messageFrame
+      messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
+
+
+/**
+ * 提示信息(可修改,类型,图片,文字,是否隐藏)
+ */
++(void)showMessage:(NSString *)msg
+             image:(UIImage *)image
+        autoHidden:(BOOL)autoHidden
+         starFrame:(CGFloat)starFrame
+      messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
+/**
+ * 提示信息(可修改背景色,文字颜色,图片,文字,是否隐藏)
+ */
++(void)showMessage:(NSString *)msg
+         backColor:(UIColor *)backColor
+         textColor:(UIColor *)textColor
+             image:(UIImage *)image
+         msgHidden:(BOOL)msgHidden
+         starFrame:(CGFloat)starFrame;
+
+
+
+/**
  * 提示信息(可修改,类型,图片,文字,是否隐藏)
  */
 +(void)showMessage:(NSString *)msg
@@ -66,6 +108,8 @@ typedef enum {
 
 #pragma mark -- 成功信息
 /** 成功信息(自己传参数) */
++(void)showAutoHiddenSuccess:(NSString *)successmsg backColor:(UIColor *)backColor successImage:(UIImage *)successImage successFrame:(CGRect)successFrame;
+/** 成功信息(自己传参数) */
 +(void)showAutoHiddenSuccess:(NSString *)successmsg backColor:(UIColor *)backColor successImage:(UIImage *)successImage;
 /** 成功信息(自己传参数) */
 + (void)showAutoHiddenSuccess:(NSString *)successmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
@@ -77,6 +121,8 @@ typedef enum {
 
 #pragma mark -- 失败信息
 /** 提示失败信息(自己传参数) */
++(void)showAutoHiddenError:(NSString *)errormsg backColor:(UIColor *)backColor errorImage:(UIImage *)errorImage errorFrame:(CGRect)errorFrame;
+/** 提示失败信息(自己传参数) */
 +(void)showAutoHiddenError:(NSString *)errormsg backColor:(UIColor *)backColor errorImage:(UIImage *)errorImage;
 /** 提示失败信息(自己传参数) */
 +(void)showAutoHiddenError:(NSString *)errormsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
@@ -87,6 +133,8 @@ typedef enum {
 
 
 #pragma mark -- 提示正在加载中
+/** 提示正在加载中 (自行传参数)*/
++(void)showLoading:(NSString *)loadingmsg backColor:(UIColor *)backColor loadingFrame:(CGRect)loadingFrame;
 /** 提示正在加载中 (自行传参数)*/
 +(void)showLoading:(NSString *)loadingmsg backColor:(UIColor *)backColor;
 /** 提示正在加载中 (自行传参数)*/

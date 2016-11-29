@@ -65,18 +65,51 @@ static int imageInter;
 }
 
 #pragma mark !!!:显示普通信息
-+ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
++(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame messageFrame:(CGRect)messageFrame;
 {
-    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:YES];
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:starFrame msgHidden:msgHidden];
+    //    [self showPromptsMessagesStyle:MJCPromptsMessagesblack];
+    [MJCPromptsView showMessageTextColor:textColor];
+    [MJCPromptsView showMessageColor:backColor];
+    [MJCPromptsView showMessageFrame:messageFrame];
+    
 }
+
++(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden starFrame:(CGFloat)starFrame messageFrame:(CGRect)messageFrame messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle
+{
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:starFrame msgHidden:autoHidden];
+    [self showPromptsMessagesStyle:MJCPromptsMessagesStyle];
+    [MJCPromptsView showMessageFrame:messageFrame];
+}
+
+
+
++(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame
+{
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:starFrame msgHidden:msgHidden];
+    //    [self showPromptsMessagesStyle:MJCPromptsMessagesblack];
+    [MJCPromptsView showMessageTextColor:textColor];
+    [MJCPromptsView showMessageColor:backColor];
+
+}
+
++(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden starFrame:(CGFloat)starFrame messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle
+{
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:starFrame msgHidden:autoHidden];
+    
+    [self showPromptsMessagesStyle:MJCPromptsMessagesStyle];
+}
+
+
 // 显示文字和图片信息(带有图片和文字,自动消失)
 +(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden;
 {
     [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:msgHidden];
     
-    [self showPromptsMessagesStyle:MJCPromptsMessagesblack];
+//    [self showPromptsMessagesStyle:MJCPromptsMessagesblack];
     
     [MJCPromptsView showMessageTextColor:textColor];
+    [MJCPromptsView showMessageColor:backColor];
 }
 // 显示文字和图片信息(可添加文字,图片,是否隐藏,可修改类型)
 +(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
@@ -87,17 +120,16 @@ static int imageInter;
     
 }
 
++ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
+{
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:YES];
+}
+
 // 显示文字和图片信息(带有文字和图片的)(是否自动消失)
 + (void)showMessage:(NSString *)msg image:(UIImage *)image msgHidden:(BOOL)msgHidden;
 {
-    if (msgHidden == YES) {
-        [self showAutoHiddenMessage:msg image:image];
-    
-    }else{
         [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:msgHidden];
-        
         [self showPromptsTypeStyle:MJCPromptsTypeblack];
-    }
 }
 
 // 显示普通信息(,自动消失)
@@ -118,6 +150,19 @@ static int imageInter;
 }
 
 #pragma mark !!!:提显示成功信息
+//设置位置大小
++(void)showAutoHiddenSuccess:(NSString *)successmsg backColor:(UIColor *)backColor successImage:(UIImage *)successImage successFrame:(CGRect)successFrame;
+{
+    [self showAutoHiddenSuccess:successmsg];
+    
+    [MJCPromptsView showMessageColor:backColor];
+    
+    [MJCPromptsView showMessageImage:successImage];
+    
+    [MJCPromptsView showMessageFrame:successFrame];
+
+}
+
 // 提显示成功信息(成功背景色,成功文字,成功图片)
 +(void)showAutoHiddenSuccess:(NSString *)successmsg backColor:(UIColor *)backColor successImage:(UIImage *)successImage
 {
@@ -154,6 +199,18 @@ static int imageInter;
 }
 
 #pragma mark !!!:显示失败信息
++(void)showAutoHiddenError:(NSString *)errormsg backColor:(UIColor *)backColor errorImage:(UIImage *)errorImage errorFrame:(CGRect)errorFrame;
+{
+    [self showAutoHiddenError:errormsg];
+    
+    [MJCPromptsView showMessageColor:backColor];
+    
+    [MJCPromptsView showMessageImage:errorImage];
+
+    [MJCPromptsView showMessageFrame:errorFrame];
+}
+
+
 // 显示失败信息(背景色,失败图片)
 +(void)showAutoHiddenError:(NSString *)errormsg backColor:(UIColor *)backColor errorImage:(UIImage *)errorImage;
 {
@@ -188,6 +245,14 @@ static int imageInter;
 
 
 #pragma mark !!!:正在加载信息
++(void)showLoading:(NSString *)loadingmsg backColor:(UIColor *)backColor loadingFrame:(CGRect)loadingFrame;
+{
+    [self showLoading:loadingmsg];
+    
+    [MJCPromptsView showMessageColor:backColor];
+    [MJCPromptsView showMessageFrame:loadingFrame];
+}
+
 // 正在加载信息(自动消失,背景颜色)
 +(void)showLoading:(NSString *)loadingmsg backColor:(UIColor *)backColor;
 {

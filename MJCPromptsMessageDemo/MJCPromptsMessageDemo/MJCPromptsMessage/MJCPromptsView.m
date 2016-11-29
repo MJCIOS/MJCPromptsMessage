@@ -85,6 +85,7 @@ static UIImageView *imageView;
     }];
     
     button.frame = window.bounds;
+    
     imageView.mjc_width = window.mjc_height * 0.5;
     imageView.mjc_height = imageView.mjc_width;
     imageView.mjc_x = MJCMarginTen;
@@ -265,6 +266,7 @@ static UIImageView *imageView;
 }
 
 
+
 // !!!:显示普通信息
 + (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden
 {
@@ -273,7 +275,6 @@ static UIImageView *imageView;
     //停止定时器
     [timer invalidate];
     // 显示窗口
-    //    [self showWindow];
     [self showWindow:starFrame];
     
     // 添加图片

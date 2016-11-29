@@ -34,7 +34,7 @@
 
 - (IBAction)three1:(id)sender { //传信息和图片.是否隐藏
     
-    [MJCPromptsMessage showMessage:@"成功加载到最新多少条数据呢" image:[UIImage imageNamed:@"successwhite"] msgHidden:NO];
+    [MJCPromptsMessage showMessage:@"成功加载到最新多少条数据呢" image:[UIImage imageNamed:@"successwhite"] msgHidden:YES];
 }
 
 - (IBAction)three2:(id)sender {//传信息和图片,自动隐藏
