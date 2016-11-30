@@ -40,7 +40,7 @@ typedef enum {
 
 #pragma mark -- 提示图片或文字信息
 /**
- * 提示信息(可修改背景色,文字颜色,图片,文字,是否隐藏)
+ * 提示信息(可设置背景色,文字颜色,图片,文字,是否隐藏,起始位置,尺寸大小)
  */
 +(void)showMessage:(NSString *)msg
          backColor:(UIColor *)backColor
@@ -51,7 +51,7 @@ typedef enum {
       messageFrame:(CGRect)messageFrame;
 
 /**
- * 提示信息(可修改,类型,图片,文字,是否隐藏)
+ * 提示信息(可设置,图片,文字,是否隐藏,起始位置,尺寸大小)
  */
 +(void)showMessage:(NSString *)msg
              image:(UIImage *)image
@@ -70,7 +70,7 @@ typedef enum {
          starFrame:(CGFloat)starFrame
       messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
 /**
- * 提示信息(可修改背景色,文字颜色,图片,文字,是否隐藏)
+ * 提示信息(可修改背景色,文字颜色,图片,文字,是否隐藏,起始位置)
  */
 +(void)showMessage:(NSString *)msg
          backColor:(UIColor *)backColor
@@ -97,12 +97,12 @@ typedef enum {
              image:(UIImage *)image
          msgHidden:(BOOL)msgHidden;
 
-/**提示图片或文字信息(是否隐藏) */
+/**提示信息(可修改,文字,图片,是否隐藏,起始位置) */
 + (void)showMessage:(NSString *)msg image:(UIImage *)image starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
-/**提示图片或文字信息(自动消失) */
-+ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
 /**提示图片或文字信息(是否隐藏) */
 + (void)showMessage:(NSString *)msg image:(UIImage *)image msgHidden:(BOOL)msgHidden;
+/**提示图片或文字信息(自动消失) */
++ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
 /** 提示文字信息(自动隐藏) */
 + (void)showAutoHiddenMessage:(NSString *)msg;
 /** 提示文字信息(是否隐藏) */
@@ -161,7 +161,7 @@ typedef enum {
 
 
 /**
- * 设置提示框的颜色
+ * 设置提示框背景颜色
  */
 +(void)showMessageColor:(UIColor *)messageColor;
 
