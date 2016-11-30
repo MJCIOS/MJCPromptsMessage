@@ -41,11 +41,12 @@
 
 - (IBAction)four:(id)sender {
 
-    [MJCPromptsMessage showAutoHiddenSuccess:@"求婚,成功了,红红火火,红红火火,红红火火" backColor:[UIColor redColor] successImage:[UIImage imageNamed:@"infoblack@2x"]];
+//    [MJCPromptsMessage showAutoHiddenSuccess:@"求婚,成功了,红红火火,红红火火,红红火火" backColor:[UIColor redColor] successImage:[UIImage imageNamed:@"infoblack@2x"]];
 
-    [MJCPromptsMessage showMessageFrame:CGRectMake(0,100, MJCScreenWidth,100)];
+//    [MJCPromptsMessage showMessageFrame:CGRectMake(0,100, MJCScreenWidth,100)];
     
 
+    [MJCPromptsMessage showAutoHiddenSuccess:@"求婚,成功了,红红火火,红红火火,红红火火" backColor:[UIColor purpleColor] successImage:nil successFrame:CGRectMake(0, 100,MJCScreenWidth,100)];
     
 }
 - (IBAction)yincang:(id)sender {

@@ -321,9 +321,11 @@ static int imageInter;
     [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
 }
 
-+ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame messageFrame:(CGRect)messageFrame;
 {
     [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:starFrame msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
+    
+    [MJCPromptsView showCustomFrame:messageFrame];
 }
 
 
