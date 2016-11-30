@@ -120,6 +120,11 @@ static int imageInter;
     
 }
 
++ (void)showMessage:(NSString *)msg image:(UIImage *)image starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
+{
+    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:starFrame msgHidden:msgHidden];
+}
+
 + (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
 {
     [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:YES];

@@ -96,6 +96,9 @@ typedef enum {
          textColor:(UIColor *)textColor
              image:(UIImage *)image
          msgHidden:(BOOL)msgHidden;
+
+/**提示图片或文字信息(是否隐藏) */
++ (void)showMessage:(NSString *)msg image:(UIImage *)image starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
 /**提示图片或文字信息(自动消失) */
 + (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
 /**提示图片或文字信息(是否隐藏) */
