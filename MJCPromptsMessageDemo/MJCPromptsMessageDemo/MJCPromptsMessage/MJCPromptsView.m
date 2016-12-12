@@ -268,7 +268,7 @@ static UIImageView *imageView;
 
 
 // !!!:显示普通信息
-+ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden textFont:(CGFloat)textFont
 {
     number = 1;
     
@@ -291,7 +291,7 @@ static UIImageView *imageView;
     label = [[UILabel alloc] init];
     [self showMessageTextColor:textColor];
     label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont systemFontOfSize:12];
+    label.font = [UIFont systemFontOfSize:textFont];
     label.textAlignment = NSTextAlignmentLeft;//文字向左对齐
     label.text = msg;
     label.numberOfLines = 0;//行数
@@ -306,7 +306,7 @@ static UIImageView *imageView;
     
     [window addSubview:label];
     
-    if (msgHidden == YES) {
+    if (msgHidden == YES){
         // 定时器方法
         timer = [NSTimer scheduledTimerWithTimeInterval:MJCMessageDuration target:self selector:@selector(hideDismiss) userInfo:nil repeats:NO];
     }else{
@@ -316,7 +316,7 @@ static UIImageView *imageView;
 }
 
 
-+ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
++ (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame textFont:(CGFloat)textFont;
 {
     number = 2;
     

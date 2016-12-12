@@ -58,7 +58,8 @@
 
 - (IBAction)three5:(id)sender{
     
-    [MJCPromptsMessage showCustomMessage:@"可传图片和文字颜色" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor purpleColor] msgHidden:YES];
+    
+    [MJCPromptsMessage showCustomMessage:@"可传图片和文字颜色" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor purpleColor] msgHidden:YES textFont:12];
     
     [MJCPromptsMessage showMessageFrame:CGRectMake(0,64,[UIScreen mainScreen].bounds.size.width,100)];
     
@@ -70,9 +71,7 @@
     
 //    [MJCPromptsMessage showMessageCustomFrame:CGRectMake(0,64, [UIScreen mainScreen].bounds.size.width,100)];
 
-
-    [MJCPromptsMessage showCustomMessage:@"自定义图片位置和文字位置,还有MJCPromptsMessage大小位置" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor purpleColor] msgHidden:NO starFrame:120 imageFrame:CGRectMake(10, 0, 50, 50) lableFrame:CGRectMake(110, 0, 100, 100)];
-
+    [MJCPromptsMessage showCustomMessage:@"自定义图片位置和文字位置,还有MJCPromptsMessage大小位置" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor purpleColor] starFrame:120 msgHidden:YES textFont:20];
 
 }
 

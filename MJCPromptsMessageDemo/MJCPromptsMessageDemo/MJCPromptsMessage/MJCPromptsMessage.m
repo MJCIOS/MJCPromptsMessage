@@ -304,26 +304,26 @@ static int imageInter;
 }
 
 /** 自定义Message的文字,图片,文字颜色,是否隐藏 */
-+ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden textFont:(CGFloat)textFont;
 {
-    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:starFrame msgHidden:msgHidden];
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:starFrame msgHidden:msgHidden textFont:textFont];
 }
 
-+ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden;
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden textFont:(CGFloat)textFont;
 {
-    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden];
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden textFont:textFont];
 }
 
 
 /** 自定义Message的文字,图片,文字颜色,是否隐藏,图片位置和文字位置 */
-+ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame;
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame textFont:(CGFloat)textFont;
 {
-    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame textFont:textFont];
 }
 
-+ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame messageFrame:(CGRect)messageFrame;
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame messageFrame:(CGRect)messageFrame textFont:(CGFloat)textFont;
 {
-    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:starFrame msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame];
+    [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:starFrame msgHidden:msgHidden imageFrame:imageFrame lableFrame:lableFrame textFont:textFont];
     
     [MJCPromptsView showCustomFrame:messageFrame];
 }
