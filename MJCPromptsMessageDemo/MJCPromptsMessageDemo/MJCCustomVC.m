@@ -74,7 +74,6 @@
 - (IBAction)three4:(id)sender {
     
 
-    
     [MJCPromptsMessage showCustomMessage:@"可传图片和文字颜色" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor purpleColor] msgHidden:YES starFrame:200 imageFrame:CGRectMake(20,20,50,100) lableFrame:CGRectMake(120, 0,50,100) messageFrame:CGRectMake(10,100,MJCScreenWidth - 20, 200) textFont:14];
 
 }

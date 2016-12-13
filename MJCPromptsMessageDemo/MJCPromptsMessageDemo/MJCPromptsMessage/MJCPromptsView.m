@@ -67,17 +67,16 @@ static UIImageView *imageView;
     //窗口的frame
     CGFloat windowH = 50;
     frames = CGRectMake(0,starFrame,MJCScreenWidth,windowH);
-    
-    //创建窗口
-    window = [[UIWindow alloc] init];
-    window.hidden = YES;//初始隐藏
-    window.windowLevel = UIWindowLevelAlert;//窗口显示位置
-    window.frame = frames;//窗口的frame,当我们创建的时候,将y值等于负的,也就是在超过了窗口的大小位置
 
+    
+    window = [[UIWindow alloc] init];
+    window.hidden = YES;
+    window.windowLevel = UIWindowLevelAlert;
+    window.frame = frames;
+    
     [self setupMessageColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
-        
-    // 动画效果
-    frames.origin.y = 64;//在这将frame的y值,再调为,我们所想要的位置
+    
+    frames.origin.y = 64;
     
     if (number == 1) {
         [self showMessageFrame:frames];
@@ -98,43 +97,38 @@ static UIImageView *imageView;
 {
     number = 1;
     
-    //停止定时器
+    
     [timer invalidate];
     
-    // 显示窗口
     [self showWindow:starFrame];
     
-    // 添加按钮
     button = [UIButton buttonWithType:UIButtonTypeCustom];
-    //按钮的点击方法
+
     [button addTarget:self action:@selector(hideDismiss) forControlEvents:UIControlEventTouchUpInside];
     
     button.titleLabel.numberOfLines = 0;
     
-    //设置按钮的文字
+
     [button setTitle:msg forState:UIControlStateNormal];
     
     [self setupMessageTextColor:textColor];
-    
-    //按钮文字大小
+
     button.titleLabel.font = MJCMessageFont;
-    //按钮图片
-    if (image) { // 如果有图片
-        //赋值图片
+    
+    if (image) {
+        
         [self setupMessageImage:image];
         
-        //修改文字内边距位置
         button.titleEdgeInsets = UIEdgeInsetsMake(0,10, 0, 0);
         
     }
-    //按钮的位置
+    
     button.frame = window.bounds;
     
     [window addSubview:button];
     
     
     if (msgHidden == YES) {
-        // 定时器方法
         timer = [NSTimer scheduledTimerWithTimeInterval:MJCMessageDuration target:self selector:@selector(hideDismiss) userInfo:nil repeats:NO];
     }else{
         [timer invalidate];
@@ -143,19 +137,17 @@ static UIImageView *imageView;
 
 }
 
-//显示加载信息
 +(void)showloading:(NSString *)loading textColor:(UIColor *)textColor
 {
     number = 1;
     
-    // 停止定时器
+
     [timer invalidate];
     timer = nil;
     
-    // 显示窗口
+
     [self showWindow:-64];
-    
-    // 创建lable
+
     label = [[UILabel alloc] init];
     [self setupTextFont:12];
     label.text = loading;
@@ -177,18 +169,14 @@ static UIImageView *imageView;
 //    }
     [window addSubview:label];
     
-    // 添加旋转器
+
     loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     
-    [loadingView startAnimating];//开始旋转
+    [loadingView startAnimating];
     
-    //计算文字宽度
     CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
-    //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
     CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
-    //Y值中心点,等于窗口的高度的一半那个位置
     CGFloat centerY = window.mjc_height * 0.5;
-    //设置旋转器的中心点
     loadingView.center = CGPointMake(centerX, centerY);
     [window addSubview:loadingView];
 }
@@ -332,8 +320,7 @@ static UIImageView *imageView;
 {
     //动画的隐藏效果
     [UIView animateWithDuration:MJCAnimationDuration animations:^{
-        //直接将窗口的y =  它的负数高度... (反正改变它的y值就可以了)
-        window.mjc_y = -window.mjc_height;
+        window.mjc_y = - window.mjc_height;
     } completion:^(BOOL finished) { //动画完成之后
         [timer invalidate];//如果你不停止定时器,会与按钮方法冲突..
         window = nil;//直接将窗口为空
@@ -421,13 +408,13 @@ static UIImageView *imageView;
 {
     label.font = [UIFont systemFontOfSize:textFont];
     
-    //计算文字宽度
+    
     CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
-    //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
+    
     CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
-    //Y值中心点,等于窗口的高度的一半那个位置
+    
     CGFloat centerY = window.mjc_height * 0.5;
-    //设置旋转器的中心点
+    
     loadingView.center = CGPointMake(centerX, centerY);
 
 }
@@ -443,13 +430,13 @@ static UIImageView *imageView;
     label.frame = window.bounds;
     label.textAlignment = NSTextAlignmentCenter;
     
-    //计算文字宽度
+
     CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
-    //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
+    
     CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
-    //Y值中心点,等于窗口的高度的一半那个位置
+    
     CGFloat centerY = window.mjc_height * 0.5;
-    //设置旋转器的中心点
+    
     loadingView.center = CGPointMake(centerX, centerY);
 
 }
