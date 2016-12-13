@@ -14,125 +14,30 @@
 #define MJCScreenWidth [UIScreen mainScreen].bounds.size.width
 
 
-typedef enum {
-    MJCPromptsTypeblack,
-    MJCPromptsTypeWhite
-}MJCPromptsTypeStyle;
-
-typedef enum {
-    MJCPromptsMessagesblack,
-    MJCPromptsMessagesWhite
-}MJCPromptsMessagesStyle;
-
 @interface MJCPromptsMessage : NSObject
 
-
-/**
- * MJCPromptsMessageStyle类型 (成功与失败的样式)
- */
-+(void)showPromptsTypeStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
-
-/**
- * MJCPromptsMessagesStyle类型 (普通信息样式)
- */
-+(void)showPromptsMessagesStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
-
-
-#pragma mark -- 提示图片或文字信息
-/**
- * 提示信息(可设置背景色,文字颜色,图片,文字,是否隐藏,起始位置,尺寸大小)
- */
-+(void)showMessage:(NSString *)msg
-         backColor:(UIColor *)backColor
-         textColor:(UIColor *)textColor
-             image:(UIImage *)image
-         msgHidden:(BOOL)msgHidden
-         starFrame:(CGFloat)starFrame
-      messageFrame:(CGRect)messageFrame;
-
-/**
- * 提示信息(可设置,图片,文字,是否隐藏,起始位置,尺寸大小)
- */
-+(void)showMessage:(NSString *)msg
-             image:(UIImage *)image
-        autoHidden:(BOOL)autoHidden
-         starFrame:(CGFloat)starFrame
-      messageFrame:(CGRect)messageFrame
-      messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
-
-
-/**
- * 提示信息(可修改,类型,图片,文字,是否隐藏)
- */
-+(void)showMessage:(NSString *)msg
-             image:(UIImage *)image
-        autoHidden:(BOOL)autoHidden
-         starFrame:(CGFloat)starFrame
-      messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
-/**
- * 提示信息(可修改背景色,文字颜色,图片,文字,是否隐藏,起始位置)
- */
-+(void)showMessage:(NSString *)msg
-         backColor:(UIColor *)backColor
-         textColor:(UIColor *)textColor
-             image:(UIImage *)image
-         msgHidden:(BOOL)msgHidden
-         starFrame:(CGFloat)starFrame;
-
-
-
-/**
- * 提示信息(可修改,类型,图片,文字,是否隐藏)
- */
-+(void)showMessage:(NSString *)msg
-             image:(UIImage *)image
-        autoHidden:(BOOL)autoHidden
-      messageStyle:(MJCPromptsMessagesStyle)MJCPromptsMessagesStyle;
-/**
- * 提示信息(可修改背景色,文字颜色,图片,文字,是否隐藏)
- */
-+(void)showMessage:(NSString *)msg
-         backColor:(UIColor *)backColor
-         textColor:(UIColor *)textColor
-             image:(UIImage *)image
-         msgHidden:(BOOL)msgHidden;
-
-/**提示信息(可修改,文字,图片,是否隐藏,起始位置) */
-+ (void)showMessage:(NSString *)msg image:(UIImage *)image starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
-/**提示图片或文字信息(是否隐藏) */
-+ (void)showMessage:(NSString *)msg image:(UIImage *)image msgHidden:(BOOL)msgHidden;
-/**提示图片或文字信息(自动消失) */
-+ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
-/** 提示文字信息(自动隐藏) */
+#pragma mark -- 显示普通信息
+// 显示普通信息(,自动消失)
 + (void)showAutoHiddenMessage:(NSString *)msg;
-/** 提示文字信息(是否隐藏) */
+
+// 显示普通信息(是否消失)
 + (void)showMessage:(NSString *)msg msgHidden:(BOOL)msgHidden;
 
+// 显示普通信息(可设置图片)
++ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
+// 显示文字和图片信息(可添加文字,图片,是否隐藏,可修改类型)
++(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden;
+// 显示普通信息(可设置动画起始位置)
++(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden starFrame:(CGFloat)starFrame;
 
-#pragma mark -- 成功信息
-/** 成功信息(自己传参数) */
-+(void)showAutoHiddenSuccess:(NSString *)successmsg backColor:(UIColor *)backColor successImage:(UIImage *)successImage successFrame:(CGRect)successFrame;
-/** 成功信息(自己传参数) */
-+(void)showAutoHiddenSuccess:(NSString *)successmsg backColor:(UIColor *)backColor successImage:(UIImage *)successImage;
-/** 成功信息(自己传参数) */
-+ (void)showAutoHiddenSuccess:(NSString *)successmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
-/** 成功信息(自己传参数) */
-+ (void)showAutoHiddenSuccess:(NSString *)msg;
-/** 提示加载成功(加载成功) */
-+ (void)showAutoHiddenSuccess;
+// 显示普通信息(可修改背景颜色,文字颜色,图片,是否自动隐藏,起始位置)
++(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame;
+// 显示普通信息(可修改背景颜色,文字颜色,图片,是否自动隐藏,起始位置,窗口位置)
++(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden starFrame:(CGFloat)starFrame messageFrame:(CGRect)messageFrame;
 
+// 显示文字和图片信息(带有图片和文字,是否自动消失)
++(void)showMessage:(NSString *)msg backColor:(UIColor *)backColor textColor:(UIColor *)textColor image:(UIImage *)image msgHidden:(BOOL)msgHidden;
 
-#pragma mark -- 失败信息
-/** 提示失败信息(自己传参数) */
-+(void)showAutoHiddenError:(NSString *)errormsg backColor:(UIColor *)backColor errorImage:(UIImage *)errorImage errorFrame:(CGRect)errorFrame;
-/** 提示失败信息(自己传参数) */
-+(void)showAutoHiddenError:(NSString *)errormsg backColor:(UIColor *)backColor errorImage:(UIImage *)errorImage;
-/** 提示失败信息(自己传参数) */
-+(void)showAutoHiddenError:(NSString *)errormsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
-/** 提示失败信息(自己传参数) */
-+ (void)showAutoHiddenError:(NSString *)msg;
-/** 提示失败信息(加载失败) */
-+ (void)showAutoHiddenError;
 
 
 #pragma mark -- 提示正在加载中
@@ -140,35 +45,11 @@ typedef enum {
 +(void)showLoading:(NSString *)loadingmsg backColor:(UIColor *)backColor loadingFrame:(CGRect)loadingFrame;
 /** 提示正在加载中 (自行传参数)*/
 +(void)showLoading:(NSString *)loadingmsg backColor:(UIColor *)backColor;
-/** 提示正在加载中 (自行传参数)*/
-+(void)showLoading:(NSString *)loadingmsg messageStyle:(MJCPromptsTypeStyle)MJCPromptsTypeStyle;
 /** 提示正在加载中(自传参数) */
 + (void)showLoading:(NSString *)msg;
 /** 提示正在加载中(正在加载中) */
 + (void)showLoading;
 
-
-
-/**
- * 隐藏消失提示框
- */
-+ (void)hideDismiss;
-
-/**
- * 修改messageFrame
- */
-+(void)showMessageFrame:(CGRect)messageFrame;
-
-
-/**
- * 设置提示框背景颜色
- */
-+(void)showMessageColor:(UIColor *)messageColor;
-
-/**
- * 设置提示框文字的颜色
- */
-+(void)showMessageTextColor:(UIColor *)textColor;
 
 
 /** 自定义Message的文字,图片,文字颜色,是否隐藏 */
@@ -186,9 +67,48 @@ typedef enum {
 
 
 /**
+ * 隐藏消失提示框
+ */
++ (void)hideDismiss;
+
+/**
+ * 修改message的Frame
+ */
++(void)reviseMessageFrame:(CGRect)messageFrame;
+
+/**
+ * 修改Loading的Frame
+ */
++(void)reviseLoadingFrame:(CGRect)loadingFrame;
+
+
+/**
  * 修改自定义Message的Frame
  */
-+ (void)showMessageCustomFrame:(CGRect)customFrame;
++ (void)reviseMessageCustomFrame:(CGRect)customFrame;
+
+
+/**
+ * 设置提示框背景颜色
+ */
++(void)reviseMessageColor:(UIColor *)messageColor;
+
+/**
+ * 设置提示框文字的颜色
+ */
++(void)reviseMessageTextColor:(UIColor *)textColor;
+
+
+/** 设置图片位置 */
++(void)reviseCustomImageViewFrame:(CGRect)imageFrame;
+
+/** 设置text位置 */
++(void)reviseCustomTextFrame:(CGRect)textFrame;
+
+/** 设置text文字大小 */
++(void)reviseCustomTextFont:(CGFloat)textfont;
+
+
 
 /** 自定义添加子控件 */
 +(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls;

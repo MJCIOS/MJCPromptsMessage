@@ -34,7 +34,6 @@
 
 - (IBAction)three1:(id)sender { //传信息和图片.是否隐藏
     
-    [MJCPromptsMessage showMessage:@"成功加载到最新多少条数据呢" image:[UIImage imageNamed:@"successwhite"] msgHidden:YES];
 }
 
 - (IBAction)three2:(id)sender {//传信息和图片,自动隐藏
@@ -50,9 +49,9 @@
 
 - (IBAction)three4:(id)sender {
     
-    [MJCPromptsMessage showMessage:@"可传图片和文字颜色和样式" image:[UIImage imageNamed:@"successwhite"] autoHidden:YES messageStyle:MJCPromptsMessagesblack];
+
     //可设置位置尺寸大小
-    [MJCPromptsMessage showMessageFrame:CGRectMake(0,64, [UIScreen mainScreen].bounds.size.width,100)];
+    [MJCPromptsMessage reviseMessageFrame:CGRectMake(0,64, [UIScreen mainScreen].bounds.size.width,100)];
 
 }
 
@@ -61,7 +60,7 @@
     
     [MJCPromptsMessage showCustomMessage:@"可传图片和文字颜色" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor purpleColor] msgHidden:YES textFont:12];
     
-    [MJCPromptsMessage showMessageFrame:CGRectMake(0,64,[UIScreen mainScreen].bounds.size.width,100)];
+    [MJCPromptsMessage reviseMessageFrame:CGRectMake(0,64,[UIScreen mainScreen].bounds.size.width,100)];
     
 }
 
@@ -99,7 +98,7 @@
     [MJCPromptsMessage windowAddSubview:100 addControls:view1];
     
     //修改位置大小
-    [MJCPromptsMessage showMessageCustomFrame:CGRectMake(0, 200,self.view.mjc_width, 100)];
+    [MJCPromptsMessage reviseMessageCustomFrame:CGRectMake(0, 200,self.view.mjc_width, 100)];
     
     
 }

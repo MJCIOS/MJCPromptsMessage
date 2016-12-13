@@ -21,18 +21,24 @@
 }
 
 - (IBAction)one2:(id)sender {
+//    
+    [MJCPromptsMessage showLoading];
+//    [MJCPromptsMessage reviseMessageTextColor:[UIColor grayColor]];
+    [MJCPromptsMessage reviseMessageColor:[UIColor redColor]];
+    [MJCPromptsMessage reviseLoadingFrame:CGRectMake(10,64,MJCScreenWidth - 20, 100)];
+    [MJCPromptsMessage reviseCustomTextFont:12];
     
-    [MJCPromptsMessage showLoading];//正在加载
+
+//    [MJCPromptsMessage showLoading:@"正在高考中" backColor:[UIColor redColor] loadingFrame:CGRectMake(10,64,MJCScreenWidth - 20, 100)];
+//    [MJCPromptsMessage reviseMessageTextColor:[UIColor purpleColor]];
+//    [MJCPromptsMessage reviseCustomTextFont:20];
+    
     
 }
 - (IBAction)two2:(id)sender {
     
     [MJCPromptsMessage showLoading:@"正在高考中"];
     
-}
-- (IBAction)three2:(id)sender {
-    
-    [MJCPromptsMessage showLoading:@"正在高考学习中,祝贺我,偶也" messageStyle:MJCPromptsTypeWhite];
 }
 
 - (IBAction)four2:(id)sender {

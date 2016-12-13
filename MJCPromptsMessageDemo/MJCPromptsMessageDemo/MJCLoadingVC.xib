@@ -40,14 +40,6 @@
                         <action selector="four2:" destination="-1" eventType="touchUpInside" id="QfJ-ng-fe8"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKk-vN-eZk">
-                    <frame key="frameInset" minX="157" minY="317" width="66" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="样式3"/>
-                    <connections>
-                        <action selector="three2:" destination="-1" eventType="touchUpInside" id="ouy-YH-RXZ"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hl7-cp-mUf">
                     <frame key="frameInset" minX="172" minY="496" width="31" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

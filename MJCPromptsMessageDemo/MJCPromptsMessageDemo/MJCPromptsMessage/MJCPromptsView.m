@@ -58,45 +58,6 @@ static UIImageView *imageView;
 
 @implementation MJCPromptsView
 
-//设置自定义Message的位置
-+(void)showCustomFrame:(CGRect)customFrame
-{
-    [UIView animateWithDuration:MJCAnimationDuration animations:^{
-        window.hidden = NO;//不隐藏
-        window.frame = customFrame;//并且重新赋值frame
-    }];
-}
-
-+(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls
-{
-    //起始位置
-    [self showWindow:starFrame];
-    
-    [window addSubview:addControls];
-}
-
-
-//设置位置
-+(void)showMessageFrame:(CGRect)messageFrame
-{
-    [UIView animateWithDuration:MJCAnimationDuration animations:^{
-        window.hidden = NO;//不隐藏
-        window.frame = messageFrame;//并且重新赋值frame
-    }];
-    
-    button.frame = window.bounds;
-    
-    imageView.mjc_width = window.mjc_height * 0.5;
-    imageView.mjc_height = imageView.mjc_width;
-    imageView.mjc_x = MJCMarginTen;
-    CGFloat centerY = window.mjc_height * 0.5;//Y值中心点,等于窗口的高度的一半那个位置
-    imageView.mjc_centerY = centerY;
-    
-    label.mjc_x =(imageView.mjc_width + MJCMarginTen)+MJCMarginTen;
-    label.mjc_y = 0;
-    label.mjc_width = window.mjc_width - (imageView.mjc_width + 10+10+10);
-    label.mjc_height = window.mjc_height;
-}
 
 /**
  * 创建显示窗口
@@ -112,8 +73,8 @@ static UIImageView *imageView;
     window.hidden = YES;//初始隐藏
     window.windowLevel = UIWindowLevelAlert;//窗口显示位置
     window.frame = frames;//窗口的frame,当我们创建的时候,将y值等于负的,也就是在超过了窗口的大小位置
-    
-    [self showMessageColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
+
+    [self setupMessageColor:[[UIColor blackColor]colorWithAlphaComponent:0.5]];
         
     // 动画效果
     frames.origin.y = 64;//在这将frame的y值,再调为,我们所想要的位置
@@ -131,23 +92,6 @@ static UIImageView *imageView;
 //    }];
 }
 
-// !!!:颜色
-+(void)showMessageColor:(UIColor *)messageColor;
-{
-    window.backgroundColor = messageColor;
-}
-// 设置图片
-+(void)showMessageImage:(UIImage *)image
-{
-    [button setImage:image forState:UIControlStateNormal];
-}
-//设置颜色
-+(void)showMessageTextColor:(UIColor *)TextColor
-{
-    [button setTitleColor:TextColor forState:UIControlStateNormal];
-    
-    label.textColor = TextColor;
-}
 
 // !!!:显示普通信息
 + (void)showAutoMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden;
@@ -170,13 +114,14 @@ static UIImageView *imageView;
     //设置按钮的文字
     [button setTitle:msg forState:UIControlStateNormal];
     
-    [self showMessageTextColor:textColor];
+    [self setupMessageTextColor:textColor];
+    
     //按钮文字大小
     button.titleLabel.font = MJCMessageFont;
     //按钮图片
     if (image) { // 如果有图片
         //赋值图片
-        [self showMessageImage:image];
+        [self setupMessageImage:image];
         
         //修改文字内边距位置
         button.titleEdgeInsets = UIEdgeInsetsMake(0,10, 0, 0);
@@ -212,10 +157,11 @@ static UIImageView *imageView;
     
     // 创建lable
     label = [[UILabel alloc] init];
-    label.font = MJCMessageFont;
+    [self setupTextFont:12];
+    label.text = loading;
     label.frame = window.bounds;
     label.textAlignment = NSTextAlignmentCenter;
-    
+    [self setupMessageTextColor:textColor];
 //    label.userInteractionEnabled = YES;
 //    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideDismiss)];
 //    [label addGestureRecognizer:tapGesture];
@@ -229,18 +175,15 @@ static UIImageView *imageView;
 //            
 //        }
 //    }
-    
-    label.text = loading;
-    
-    [self showMessageTextColor:textColor];
-    
     [window addSubview:label];
-    //计算文字宽度
-    CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : MJCMessageFont}].width;
     
     // 添加旋转器
-    UIActivityIndicatorView *loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    
     [loadingView startAnimating];//开始旋转
+    
+    //计算文字宽度
+    CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
     //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
     CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
     //Y值中心点,等于窗口的高度的一半那个位置
@@ -249,23 +192,6 @@ static UIImageView *imageView;
     loadingView.center = CGPointMake(centerX, centerY);
     [window addSubview:loadingView];
 }
-
-
-// !!!:隐藏指示栏
-+ (void)hideDismiss
-{
-    //动画的隐藏效果
-    [UIView animateWithDuration:MJCAnimationDuration animations:^{
-        //直接将窗口的y =  它的负数高度... (反正改变它的y值就可以了)
-        window.mjc_y = -window.mjc_height;
-    } completion:^(BOOL finished) { //动画完成之后
-        [timer invalidate];//如果你不停止定时器,会与按钮方法冲突..
-        window = nil;//直接将窗口为空
-        timer = nil;//定时器为空
-    }];
-}
-
-
 
 // !!!:显示普通信息
 + (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden textFont:(CGFloat)textFont
@@ -289,9 +215,9 @@ static UIImageView *imageView;
     
     // 创建lable
     label = [[UILabel alloc] init];
-    [self showMessageTextColor:textColor];
+    [self setupMessageTextColor:textColor];
     label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont systemFontOfSize:textFont];
+    [self setupTextFont:textFont];
     label.textAlignment = NSTextAlignmentLeft;//文字向左对齐
     label.text = msg;
     label.numberOfLines = 0;//行数
@@ -329,18 +255,18 @@ static UIImageView *imageView;
     // 添加图片
     imageView = [[UIImageView alloc] init];
     imageView.image = image;
-    imageView.frame = imageFrame;
+    [self setupimageViewFrame:imageFrame];
     [window addSubview:imageView];
     
     // 创建lable
     label = [[UILabel alloc] init];
-    [self showMessageTextColor:textColor];
-    label.backgroundColor = [UIColor redColor];
-    label.font = [UIFont systemFontOfSize:12];
+    [self setupMessageTextColor:textColor];
+    label.backgroundColor = [UIColor clearColor];
+    [self setupTextFont:textFont];
     label.textAlignment = NSTextAlignmentLeft;//文字向左对齐
     label.text = msg;
     label.numberOfLines = 0;//行数
-    label.frame = lableFrame;
+    [self setupTextFrame:lableFrame];
     label.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideDismiss)];
     [label addGestureRecognizer:tapGesture];
@@ -353,6 +279,128 @@ static UIImageView *imageView;
     }else{
         [timer invalidate];
     }
+
+}
+
+
++(void)setupimageViewFrame:(CGRect)imageFrame
+{
+    imageView.frame = imageFrame;
+}
+
++(void)setupTextFrame:(CGRect)textFrame
+{
+    label.frame = textFrame;
+}
++(void)setupTextFont:(CGFloat)textFont
+{
+    label.font = [UIFont systemFontOfSize:textFont];
+    
+    //计算文字宽度
+    CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
+    //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
+    CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
+    //Y值中心点,等于窗口的高度的一半那个位置
+    CGFloat centerY = window.mjc_height * 0.5;
+    //设置旋转器的中心点
+    loadingView.center = CGPointMake(centerX, centerY);
+}
+
+// !!!:颜色
++(void)setupMessageColor:(UIColor *)messageColor;
+{
+    window.backgroundColor = messageColor;
+}
+// 设置图片
++(void)setupMessageImage:(UIImage *)image
+{
+    [button setImage:image forState:UIControlStateNormal];
+}
+//设置文字颜色
++(void)setupMessageTextColor:(UIColor *)TextColor
+{
+    [button setTitleColor:TextColor forState:UIControlStateNormal];
+    
+    label.textColor = TextColor;
+}
+
+
+// !!!:隐藏指示栏
++ (void)hideDismiss
+{
+    //动画的隐藏效果
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        //直接将窗口的y =  它的负数高度... (反正改变它的y值就可以了)
+        window.mjc_y = -window.mjc_height;
+    } completion:^(BOOL finished) { //动画完成之后
+        [timer invalidate];//如果你不停止定时器,会与按钮方法冲突..
+        window = nil;//直接将窗口为空
+        timer = nil;//定时器为空
+    }];
+}
+
+
+
++(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls
+{
+    //起始位置
+    [self showWindow:starFrame];
+    
+    [window addSubview:addControls];
+}
+
+
+//设置自定义Message的位置
++(void)showCustomFrame:(CGRect)customFrame
+{
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        window.hidden = NO;//不隐藏
+        window.frame = customFrame;//并且重新赋值frame
+    }];
+}
+
+//设置位置
++(void)showMessageFrame:(CGRect)messageFrame
+{
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        window.hidden = NO;//不隐藏
+        window.frame = messageFrame;//并且重新赋值frame
+    }];
+    
+    button.frame = window.bounds;
+    
+    imageView.mjc_width = window.mjc_height * 0.5;
+    imageView.mjc_height = imageView.mjc_width;
+    imageView.mjc_x = MJCMarginTen;
+    CGFloat centerY = window.mjc_height * 0.5;//Y值中心点,等于窗口的高度的一半那个位置
+    imageView.mjc_centerY = centerY;
+    
+    label.mjc_x =(imageView.mjc_width + MJCMarginTen)+MJCMarginTen;
+    label.mjc_y = 0;
+    label.mjc_width = window.mjc_width - (imageView.mjc_width + 10+10+10);
+    label.mjc_height = window.mjc_height;
+    
+}
+
+//设置位置
++(void)setupLoadingFrame:(CGRect)messageFrame
+{
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        window.hidden = NO;//不隐藏
+        window.frame = messageFrame;//并且重新赋值frame
+    }];
+    
+    label.frame = window.bounds;
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    //计算文字宽度
+    CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
+    //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
+    CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
+    //Y值中心点,等于窗口的高度的一半那个位置
+    CGFloat centerY = window.mjc_height * 0.5;
+    //设置旋转器的中心点
+    loadingView.center = CGPointMake(centerX, centerY);
 
 }
 

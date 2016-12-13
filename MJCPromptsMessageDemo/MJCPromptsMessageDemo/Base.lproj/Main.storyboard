@@ -34,15 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnI-Ws-1Ze">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="BbC-Q0-u9Z"/>
-                                </constraints>
-                                <state key="normal" title="成功"/>
-                                <connections>
-                                    <action selector="successOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgv-HL-JzE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWD-oG-V0t">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jSu-KJ-sNJ"/>
@@ -50,15 +41,6 @@
                                 <state key="normal" title="正在加载"/>
                                 <connections>
                                     <action selector="loadingOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgF-Db-V46"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0K-WM-GFF">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="xni-dx-S8s"/>
-                                </constraints>
-                                <state key="normal" title="失败"/>
-                                <connections>
-                                    <action selector="errorOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9K-dV-ncQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clo-CP-xXY">
@@ -73,17 +55,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JWD-oG-V0t" firstAttribute="top" secondItem="j0K-WM-GFF" secondAttribute="bottom" constant="40" id="2Ei-iy-FR4"/>
-                            <constraint firstItem="j0K-WM-GFF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G7n-ea-geK"/>
-                            <constraint firstItem="YnI-Ws-1Ze" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ixh-pW-665"/>
-                            <constraint firstItem="YnI-Ws-1Ze" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="KIA-G4-ZJ7"/>
-                            <constraint firstItem="j0K-WM-GFF" firstAttribute="top" secondItem="YnI-Ws-1Ze" secondAttribute="bottom" constant="60" id="Nio-4e-TIn"/>
+                            <constraint firstItem="JWD-oG-V0t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="220" id="MaQ-qf-kgz"/>
                             <constraint firstItem="clo-CP-xXY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S3j-sE-Mse"/>
                             <constraint firstItem="clo-CP-xXY" firstAttribute="top" secondItem="JWD-oG-V0t" secondAttribute="bottom" constant="40" id="UU8-lX-84u"/>
                             <constraint firstAttribute="trailing" secondItem="JWD-oG-V0t" secondAttribute="trailing" id="dag-cd-cO2"/>
-                            <constraint firstAttribute="trailing" secondItem="j0K-WM-GFF" secondAttribute="trailing" id="o7K-Bd-PR8"/>
                             <constraint firstAttribute="trailing" secondItem="clo-CP-xXY" secondAttribute="trailing" id="oN7-yQ-sAt"/>
-                            <constraint firstAttribute="trailing" secondItem="YnI-Ws-1Ze" secondAttribute="trailing" id="t1i-IY-cxC"/>
                             <constraint firstItem="JWD-oG-V0t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t3W-4p-Knu"/>
                         </constraints>
                     </view>
