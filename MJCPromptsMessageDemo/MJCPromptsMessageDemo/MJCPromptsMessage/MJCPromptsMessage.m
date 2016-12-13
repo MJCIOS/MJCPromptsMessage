@@ -113,6 +113,11 @@
     [MJCPromptsView showMessage:msg image:image textColor:textColor starFrame:-64 msgHidden:msgHidden textFont:textFont];
 }
 
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image msgHidden:(BOOL)msgHidden;
+{
+    [MJCPromptsView showMessage:msg image:image textColor:[UIColor blackColor] starFrame:-64 msgHidden:msg textFont:12];
+}
+
 
 /** 自定义Message的文字,图片,文字颜色,是否隐藏,图片位置和文字位置 */
 + (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame textFont:(CGFloat)textFont;
@@ -142,6 +147,11 @@
 +(void)reviseCustomTextFont:(CGFloat)textfont
 {
     [MJCPromptsView setupTextFont:textfont];
+}
+
++(void)reviseLoadingTextFont:(CGFloat)textfont;
+{
+    [MJCPromptsView setupLoadingTextFont:textfont];
 }
 
 //设置提示框frame

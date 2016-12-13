@@ -26,7 +26,8 @@
 //    [MJCPromptsMessage reviseMessageTextColor:[UIColor grayColor]];
     [MJCPromptsMessage reviseMessageColor:[UIColor redColor]];
     [MJCPromptsMessage reviseLoadingFrame:CGRectMake(10,64,MJCScreenWidth - 20, 100)];
-    [MJCPromptsMessage reviseCustomTextFont:12];
+    [MJCPromptsMessage reviseLoadingTextFont:12];
+    
     
 
 //    [MJCPromptsMessage showLoading:@"正在高考中" backColor:[UIColor redColor] loadingFrame:CGRectMake(10,64,MJCScreenWidth - 20, 100)];

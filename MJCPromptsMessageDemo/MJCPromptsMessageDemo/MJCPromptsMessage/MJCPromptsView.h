@@ -46,5 +46,7 @@
 
 +(void)setupLoadingFrame:(CGRect)messageFrame;
 
++(void)setupLoadingTextFont:(CGFloat)textFont;
+
 
 @end

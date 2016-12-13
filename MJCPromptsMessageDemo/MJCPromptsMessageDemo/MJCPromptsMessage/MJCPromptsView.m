@@ -285,25 +285,27 @@ static UIImageView *imageView;
 
 +(void)setupimageViewFrame:(CGRect)imageFrame
 {
-    imageView.frame = imageFrame;
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        imageView.hidden = YES;
+        imageView.frame = imageFrame;
+    } completion:^(BOOL finished) {
+        imageView.hidden = NO;
+    }];    
 }
 
 +(void)setupTextFrame:(CGRect)textFrame
 {
-    label.frame = textFrame;
+    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+        label.hidden = YES;
+        label.frame = textFrame;
+    } completion:^(BOOL finished) {
+        label.hidden = NO;
+    }];
 }
+
 +(void)setupTextFont:(CGFloat)textFont
 {
     label.font = [UIFont systemFontOfSize:textFont];
-    
-    //计算文字宽度
-    CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
-    //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
-    CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
-    //Y值中心点,等于窗口的高度的一半那个位置
-    CGFloat centerY = window.mjc_height * 0.5;
-    //设置旋转器的中心点
-    loadingView.center = CGPointMake(centerX, centerY);
 }
 
 // !!!:颜色
@@ -356,30 +358,78 @@ static UIImageView *imageView;
     [UIView animateWithDuration:MJCAnimationDuration animations:^{
         window.hidden = NO;//不隐藏
         window.frame = customFrame;//并且重新赋值frame
+        button.frame = window.bounds;
+        button.hidden = YES;
+    } completion:^(BOOL finished) {
+        button.hidden = NO;
     }];
+    
+    
 }
 
 //设置位置
 +(void)showMessageFrame:(CGRect)messageFrame
 {
+//    [UIView animateWithDuration:MJCAnimationDuration animations:^{
+//        window.hidden = NO;//不隐藏
+//        window.frame = messageFrame;//并且重新赋值frame
+//    }];
+    
     [UIView animateWithDuration:MJCAnimationDuration animations:^{
         window.hidden = NO;//不隐藏
         window.frame = messageFrame;//并且重新赋值frame
+        button.frame = window.bounds;
+        button.hidden = YES;
+        imageView.hidden = YES;
+        label.hidden = YES;
+        
+        imageView.mjc_width = window.mjc_height * 0.5;
+        imageView.mjc_height = imageView.mjc_width;
+        imageView.mjc_x = MJCMarginTen;
+        CGFloat centerY = window.mjc_height * 0.5;//Y值中心点,等于窗口的高度的一半那个位置
+        imageView.mjc_centerY = centerY;
+        
+        label.mjc_x =(imageView.mjc_width + MJCMarginTen)+MJCMarginTen;
+        label.mjc_y = 0;
+        label.mjc_width = window.mjc_width - (imageView.mjc_width + 10+10+10);
+        label.mjc_height = window.mjc_height;
+
+        
+    } completion:^(BOOL finished) {
+        button.hidden = NO;
+        label.hidden = NO;
+        imageView.hidden = NO;
     }];
+
     
-    button.frame = window.bounds;
+//    button.frame = window.bounds;
+//    
+//    imageView.mjc_width = window.mjc_height * 0.5;
+//    imageView.mjc_height = imageView.mjc_width;
+//    imageView.mjc_x = MJCMarginTen;
+//    CGFloat centerY = window.mjc_height * 0.5;//Y值中心点,等于窗口的高度的一半那个位置
+//    imageView.mjc_centerY = centerY;
+//    
+//    label.mjc_x =(imageView.mjc_width + MJCMarginTen)+MJCMarginTen;
+//    label.mjc_y = 0;
+//    label.mjc_width = window.mjc_width - (imageView.mjc_width + 10+10+10);
+//    label.mjc_height = window.mjc_height;
     
-    imageView.mjc_width = window.mjc_height * 0.5;
-    imageView.mjc_height = imageView.mjc_width;
-    imageView.mjc_x = MJCMarginTen;
-    CGFloat centerY = window.mjc_height * 0.5;//Y值中心点,等于窗口的高度的一半那个位置
-    imageView.mjc_centerY = centerY;
+}
+
++(void)setupLoadingTextFont:(CGFloat)textFont
+{
+    label.font = [UIFont systemFontOfSize:textFont];
     
-    label.mjc_x =(imageView.mjc_width + MJCMarginTen)+MJCMarginTen;
-    label.mjc_y = 0;
-    label.mjc_width = window.mjc_width - (imageView.mjc_width + 10+10+10);
-    label.mjc_height = window.mjc_height;
-    
+    //计算文字宽度
+    CGFloat msgW = [label.text sizeWithAttributes:@{NSFontAttributeName : label.font}].width;
+    //(窗口的宽度-文字的宽度)的一半 - 离文字的间距
+    CGFloat centerX = (window.mjc_width- msgW) * 0.5 - MJCMargin;
+    //Y值中心点,等于窗口的高度的一半那个位置
+    CGFloat centerY = window.mjc_height * 0.5;
+    //设置旋转器的中心点
+    loadingView.center = CGPointMake(centerX, centerY);
+
 }
 
 //设置位置

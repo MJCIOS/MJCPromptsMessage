@@ -52,6 +52,10 @@
 
 
 
+#pragma mark -- 图片文字提示框
+
++ (void)showCustomMessage:(NSString *)msg image:(UIImage *)image msgHidden:(BOOL)msgHidden;
+
 /** 自定义Message的文字,图片,文字颜色,是否隐藏 */
 + (void)showCustomMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor msgHidden:(BOOL)msgHidden textFont:(CGFloat)textFont;
 
@@ -107,6 +111,8 @@
 
 /** 设置text文字大小 */
 +(void)reviseCustomTextFont:(CGFloat)textfont;
+
++(void)reviseLoadingTextFont:(CGFloat)textfont;
 
 
 

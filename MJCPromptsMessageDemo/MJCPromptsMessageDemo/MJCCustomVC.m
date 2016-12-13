@@ -24,34 +24,58 @@
 - (IBAction)one4:(id)sender {
     
     [MJCPromptsMessage showAutoHiddenMessage:@"暂无最新数据"];//传普通信息
+//    [MJCPromptsMessage reviseMessageTextColor:[UIColor grayColor]];
+//    [MJCPromptsMessage reviseMessageColor:[UIColor redColor]];
+//    [MJCPromptsMessage reviseCustomTextFont:12];
+//    [MJCPromptsMessage reviseMessageFrame:CGRectMake(10,100,MJCScreenWidth - 20, 200)];
+    
 }
 
 - (IBAction)two4:(id)sender {
 
     [MJCPromptsMessage showMessage:@"最新加载20条数据" msgHidden:NO];//传普通信息,可自设置是否隐藏
+    [MJCPromptsMessage reviseMessageTextColor:[UIColor grayColor]];
+    [MJCPromptsMessage reviseMessageColor:[UIColor redColor]];
+    [MJCPromptsMessage reviseCustomTextFont:12];
+    [MJCPromptsMessage reviseMessageFrame:CGRectMake(10,100,MJCScreenWidth - 20, 200)];
     
 }
 
 - (IBAction)three1:(id)sender { //传信息和图片.是否隐藏
     
+    [MJCPromptsMessage showAutoHiddenMessage:@"可自定义背景色和文字颜色和图片" image:[UIImage imageNamed:@"successwhite"]];
+    [MJCPromptsMessage reviseMessageTextColor:[UIColor grayColor]];
+    [MJCPromptsMessage reviseMessageColor:[UIColor redColor]];
+    [MJCPromptsMessage reviseCustomTextFont:12];
+    [MJCPromptsMessage reviseMessageFrame:CGRectMake(10,100,MJCScreenWidth - 20, 200)];
 }
 
 - (IBAction)three2:(id)sender {//传信息和图片,自动隐藏
-    
-    [MJCPromptsMessage showAutoHiddenMessage:@"可自定义背景色和文字颜色和图片" image:[UIImage imageNamed:@"successwhite"]];
+    [MJCPromptsMessage showMessage:@"可传背景色和文字颜色和图片" backColor:[UIColor redColor] textColor:[UIColor purpleColor] image:[UIImage imageNamed:@"successwhite"] msgHidden:NO];
+    [MJCPromptsMessage reviseMessageTextColor:[UIColor grayColor]];
+    [MJCPromptsMessage reviseMessageColor:[UIColor redColor]];
+    [MJCPromptsMessage reviseCustomTextFont:12];
+    [MJCPromptsMessage reviseMessageFrame:CGRectMake(10,100,MJCScreenWidth - 20, 200)];
 }
 
-- (IBAction)three3:(id)sender {
+- (IBAction)three3:(id)sender
+{
     
-    [MJCPromptsMessage showMessage:@"可传背景色和文字颜色和图片" backColor:[UIColor redColor] textColor:[UIColor purpleColor] image:[UIImage imageNamed:@"successwhite"] msgHidden:NO];
-    
+    [MJCPromptsMessage showCustomMessage:@"可传图片和文字颜色" image:[UIImage imageNamed:@"LOL2"] msgHidden:YES];
+    [MJCPromptsMessage reviseMessageTextColor:[UIColor grayColor]];
+    [MJCPromptsMessage reviseMessageColor:[UIColor redColor]];
+    [MJCPromptsMessage reviseCustomTextFont:12];
+    [MJCPromptsMessage reviseMessageFrame:CGRectMake(10,100,MJCScreenWidth - 20, 200)];
+    [MJCPromptsMessage reviseCustomTextFrame:CGRectMake(20,20,50,100)];
+    [MJCPromptsMessage reviseCustomImageViewFrame:CGRectMake(120, 0,50,100)];
+
 }
 
 - (IBAction)three4:(id)sender {
     
 
-    //可设置位置尺寸大小
-    [MJCPromptsMessage reviseMessageFrame:CGRectMake(0,64, [UIScreen mainScreen].bounds.size.width,100)];
+    
+    [MJCPromptsMessage showCustomMessage:@"可传图片和文字颜色" image:[UIImage imageNamed:@"LOL2"] textColor:[UIColor purpleColor] msgHidden:YES starFrame:200 imageFrame:CGRectMake(20,20,50,100) lableFrame:CGRectMake(120, 0,50,100) messageFrame:CGRectMake(10,100,MJCScreenWidth - 20, 200) textFont:14];
 
 }
 
