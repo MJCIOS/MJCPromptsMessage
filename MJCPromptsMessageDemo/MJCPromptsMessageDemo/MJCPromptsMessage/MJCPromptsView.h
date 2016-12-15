@@ -20,6 +20,7 @@
 
 + (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden textFont:(CGFloat)textFont;
 
+
 + (void)showMessage:(NSString *)msg image:(UIImage *)image textColor:(UIColor *)textColor starFrame:(CGFloat)starFrame msgHidden:(BOOL)msgHidden imageFrame:(CGRect)imageFrame lableFrame:(CGRect)lableFrame textFont:(CGFloat)textFont;
 
 
@@ -48,5 +49,10 @@
 
 +(void)setupLoadingTextFont:(CGFloat)textFont;
 
++(void)setupPromptedLayer:(CGFloat)layer;
+
++(void)isClickdisappear:(BOOL)isClickdisappear;
+
++(void)isHiddernEndShowAnimal:(BOOL)animal;
 
 @end

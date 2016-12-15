@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "MJCPromptsMessage.h"
+#import "MJCPackageMessage.h"
 
 #import "MJCLoadingVC.h"
+#import "MJCMessageVC.h"
 
-#import "MJCCustomVC.h"
+#import "MJCCustomAddViewVC.h"
 
 @interface ViewController ()
 
@@ -32,7 +33,6 @@
     
     MJCLoadingVC *VC1 = [MJCLoadingVC new];
     
-    
     [self.navigationController pushViewController:VC1 animated:YES];
     
 }
@@ -41,11 +41,19 @@
 
 - (IBAction)msgAutoHiddenClick:(id)sender {
     
-    
-    MJCCustomVC *VC1 = [MJCCustomVC new];
-    
+    MJCMessageVC *VC1 = [MJCMessageVC new];
     
     [self.navigationController pushViewController:VC1 animated:YES];    
+    
+}
+
+
+- (IBAction)custumeclick:(id)sender {
+    
+    MJCCustomAddViewVC *VC1 = [MJCCustomAddViewVC new];
+    
+    
+    [self.navigationController pushViewController:VC1 animated:YES];
     
 }
 

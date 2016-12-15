@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		256BD8821E0241D6005185C9 /* MJCPackageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 256BD8811E0241D6005185C9 /* MJCPackageMessage.m */; };
+		256BD8861E026D71005185C9 /* MJCCustomAddViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 256BD8841E026D71005185C9 /* MJCCustomAddViewVC.m */; };
+		256BD8871E026D71005185C9 /* MJCCustomAddViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 256BD8851E026D71005185C9 /* MJCCustomAddViewVC.xib */; };
 		25A479CA1DDC7F5500AE2829 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479C91DDC7F5500AE2829 /* main.m */; };
 		25A479CD1DDC7F5500AE2829 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479CC1DDC7F5500AE2829 /* AppDelegate.m */; };
 		25A479D01DDC7F5500AE2829 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A479CF1DDC7F5500AE2829 /* ViewController.m */; };
@@ -38,8 +41,8 @@
 		25A47A291DDC80A600AE2829 /* successwhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A171DDC80A600AE2829 /* successwhite@3x.png */; };
 		25A47A381DDD345D00AE2829 /* MJCLoadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A361DDD345D00AE2829 /* MJCLoadingVC.m */; };
 		25A47A391DDD345D00AE2829 /* MJCLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A371DDD345D00AE2829 /* MJCLoadingVC.xib */; };
-		25A47A3D1DDD348100AE2829 /* MJCCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */; };
-		25A47A3E1DDD348100AE2829 /* MJCCustomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */; };
+		25A47A3D1DDD348100AE2829 /* MJCMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A47A3B1DDD348100AE2829 /* MJCMessageVC.m */; };
+		25A47A3E1DDD348100AE2829 /* MJCMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A3C1DDD348100AE2829 /* MJCMessageVC.xib */; };
 		25A47A421DDDB72300AE2829 /* 成功与失败.gif in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A3F1DDDB72200AE2829 /* 成功与失败.gif */; };
 		25A47A431DDDB72300AE2829 /* 正在加载.gif in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A401DDDB72200AE2829 /* 正在加载.gif */; };
 		25A47A441DDDB72300AE2829 /* 自定义样式.gif in Resources */ = {isa = PBXBuildFile; fileRef = 25A47A411DDDB72200AE2829 /* 自定义样式.gif */; };
@@ -63,6 +66,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		256BD8801E0241D6005185C9 /* MJCPackageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCPackageMessage.h; sourceTree = "<group>"; };
+		256BD8811E0241D6005185C9 /* MJCPackageMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCPackageMessage.m; sourceTree = "<group>"; };
+		256BD8831E026D71005185C9 /* MJCCustomAddViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCCustomAddViewVC.h; sourceTree = "<group>"; };
+		256BD8841E026D71005185C9 /* MJCCustomAddViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCCustomAddViewVC.m; sourceTree = "<group>"; };
+		256BD8851E026D71005185C9 /* MJCCustomAddViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCCustomAddViewVC.xib; sourceTree = "<group>"; };
 		25A479C51DDC7F5500AE2829 /* MJCPromptsMessageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJCPromptsMessageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A479C91DDC7F5500AE2829 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		25A479CB1DDC7F5500AE2829 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,9 +114,9 @@
 		25A47A351DDD345D00AE2829 /* MJCLoadingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCLoadingVC.h; sourceTree = "<group>"; };
 		25A47A361DDD345D00AE2829 /* MJCLoadingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCLoadingVC.m; sourceTree = "<group>"; };
 		25A47A371DDD345D00AE2829 /* MJCLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCLoadingVC.xib; sourceTree = "<group>"; };
-		25A47A3A1DDD348100AE2829 /* MJCCustomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCCustomVC.h; sourceTree = "<group>"; };
-		25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCCustomVC.m; sourceTree = "<group>"; };
-		25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCCustomVC.xib; sourceTree = "<group>"; };
+		25A47A3A1DDD348100AE2829 /* MJCMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCMessageVC.h; sourceTree = "<group>"; };
+		25A47A3B1DDD348100AE2829 /* MJCMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCMessageVC.m; sourceTree = "<group>"; };
+		25A47A3C1DDD348100AE2829 /* MJCMessageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MJCMessageVC.xib; sourceTree = "<group>"; };
 		25A47A3F1DDDB72200AE2829 /* 成功与失败.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "成功与失败.gif"; sourceTree = "<group>"; };
 		25A47A401DDDB72200AE2829 /* 正在加载.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "正在加载.gif"; sourceTree = "<group>"; };
 		25A47A411DDDB72200AE2829 /* 自定义样式.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "自定义样式.gif"; sourceTree = "<group>"; };
@@ -210,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				25A47A051DDC80A600AE2829 /* images */,
+				256BD8801E0241D6005185C9 /* MJCPackageMessage.h */,
+				256BD8811E0241D6005185C9 /* MJCPackageMessage.m */,
 				25A479FC1DDC803100AE2829 /* MJCPromptsMessage.h */,
 				25A479FD1DDC803100AE2829 /* MJCPromptsMessage.m */,
 				25A479FE1DDC803100AE2829 /* MJCPromptsView.h */,
@@ -251,9 +261,12 @@
 				25A47A351DDD345D00AE2829 /* MJCLoadingVC.h */,
 				25A47A361DDD345D00AE2829 /* MJCLoadingVC.m */,
 				25A47A371DDD345D00AE2829 /* MJCLoadingVC.xib */,
-				25A47A3A1DDD348100AE2829 /* MJCCustomVC.h */,
-				25A47A3B1DDD348100AE2829 /* MJCCustomVC.m */,
-				25A47A3C1DDD348100AE2829 /* MJCCustomVC.xib */,
+				25A47A3A1DDD348100AE2829 /* MJCMessageVC.h */,
+				25A47A3B1DDD348100AE2829 /* MJCMessageVC.m */,
+				25A47A3C1DDD348100AE2829 /* MJCMessageVC.xib */,
+				256BD8831E026D71005185C9 /* MJCCustomAddViewVC.h */,
+				256BD8841E026D71005185C9 /* MJCCustomAddViewVC.m */,
+				256BD8851E026D71005185C9 /* MJCCustomAddViewVC.xib */,
 			);
 			name = "控制器";
 			sourceTree = "<group>";
@@ -372,7 +385,7 @@
 				25A47A251DDC80A600AE2829 /* successblack@2x.png in Resources */,
 				25A47A291DDC80A600AE2829 /* successwhite@3x.png in Resources */,
 				25A47A231DDC80A600AE2829 /* infowhite@3x.png in Resources */,
-				25A47A3E1DDD348100AE2829 /* MJCCustomVC.xib in Resources */,
+				25A47A3E1DDD348100AE2829 /* MJCMessageVC.xib in Resources */,
 				25A47A1C1DDC80A600AE2829 /* errorwhite@2x .png in Resources */,
 				25A47A1B1DDC80A600AE2829 /* errorwhite.png in Resources */,
 				25A47A211DDC80A600AE2829 /* infowhite.png in Resources */,
@@ -390,6 +403,7 @@
 				25A47A1D1DDC80A600AE2829 /* errorwhite@3x.png in Resources */,
 				25A479D31DDC7F5500AE2829 /* Main.storyboard in Resources */,
 				25A47A261DDC80A600AE2829 /* successblack@3x.png in Resources */,
+				256BD8871E026D71005185C9 /* MJCCustomAddViewVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +429,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A47A031DDC803100AE2829 /* MJCPromptsView.m in Sources */,
+				256BD8861E026D71005185C9 /* MJCCustomAddViewVC.m in Sources */,
+				256BD8821E0241D6005185C9 /* MJCPackageMessage.m in Sources */,
 				25A479D01DDC7F5500AE2829 /* ViewController.m in Sources */,
 				25A479CD1DDC7F5500AE2829 /* AppDelegate.m in Sources */,
 				25A47A041DDC803100AE2829 /* UIView+MJCExtenSion.m in Sources */,
-				25A47A3D1DDD348100AE2829 /* MJCCustomVC.m in Sources */,
+				25A47A3D1DDD348100AE2829 /* MJCMessageVC.m in Sources */,
 				25A47A381DDD345D00AE2829 /* MJCLoadingVC.m in Sources */,
 				25A47A021DDC803100AE2829 /* MJCPromptsMessage.m in Sources */,
 				25A479CA1DDC7F5500AE2829 /* main.m in Sources */,

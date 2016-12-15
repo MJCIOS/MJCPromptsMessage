@@ -23,8 +23,6 @@
 // 显示普通信息(是否消失)
 + (void)showMessage:(NSString *)msg msgHidden:(BOOL)msgHidden;
 
-// 显示普通信息(可设置图片)
-+ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
 // 显示文字和图片信息(可添加文字,图片,是否隐藏,可修改类型)
 +(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden;
 // 显示普通信息(可设置动画起始位置)
@@ -114,9 +112,15 @@
 
 +(void)reviseLoadingTextFont:(CGFloat)textfont;
 
-
-
 /** 自定义添加子控件 */
-+(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls;
++(void)messageStarFrame:(CGFloat)starFrame addCusttomSubview:(UIView *)custtomSubview;
+
+
++(void)reviseClickDisappear:(BOOL)clickDisappear;
+
++(void)isHiddenEndShowAnimal:(BOOL)animal;
+
++(void)revisePromptedLayer:(CGFloat)layer;
+
 
 @end

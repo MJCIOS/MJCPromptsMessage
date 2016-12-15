@@ -47,9 +47,19 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="OS8-g6-5fZ"/>
                                 </constraints>
-                                <state key="normal" title="自定义样式"/>
+                                <state key="normal" title="自定义修改内容属性"/>
                                 <connections>
                                     <action selector="msgAutoHiddenClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t98-sL-MDI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwx-s4-ITN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TuL-On-N66"/>
+                                </constraints>
+                                <state key="normal" title="自定义添加控件"/>
+                                <connections>
+                                    <action selector="custumeclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpD-je-WyW"/>
+                                    <action selector="msgAutoHiddenClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8y-zp-W84"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,10 +67,13 @@
                         <constraints>
                             <constraint firstItem="JWD-oG-V0t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="220" id="MaQ-qf-kgz"/>
                             <constraint firstItem="clo-CP-xXY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S3j-sE-Mse"/>
-                            <constraint firstItem="clo-CP-xXY" firstAttribute="top" secondItem="JWD-oG-V0t" secondAttribute="bottom" constant="40" id="UU8-lX-84u"/>
+                            <constraint firstItem="clo-CP-xXY" firstAttribute="top" secondItem="JWD-oG-V0t" secondAttribute="bottom" constant="20" id="UU8-lX-84u"/>
+                            <constraint firstItem="cwx-s4-ITN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WH7-OM-qwq"/>
                             <constraint firstAttribute="trailing" secondItem="JWD-oG-V0t" secondAttribute="trailing" id="dag-cd-cO2"/>
+                            <constraint firstAttribute="trailing" secondItem="cwx-s4-ITN" secondAttribute="trailing" id="lcX-aL-KeY"/>
                             <constraint firstAttribute="trailing" secondItem="clo-CP-xXY" secondAttribute="trailing" id="oN7-yQ-sAt"/>
                             <constraint firstItem="JWD-oG-V0t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t3W-4p-Knu"/>
+                            <constraint firstItem="cwx-s4-ITN" firstAttribute="top" secondItem="clo-CP-xXY" secondAttribute="bottom" constant="10" id="vH3-AG-rMu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eF4-Ho-pFx"/>

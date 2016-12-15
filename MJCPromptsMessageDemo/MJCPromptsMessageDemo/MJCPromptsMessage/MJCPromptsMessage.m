@@ -21,17 +21,12 @@
 // 显示普通信息(,自动消失)
 + (void)showAutoHiddenMessage:(NSString *)msg
 {
-    [self showAutoHiddenMessage:msg image:nil];
+    [self showMessage:msg image:nil autoHidden:YES];
 }
 // 显示普通信息(是否消失)
 + (void)showMessage:(NSString *)msg msgHidden:(BOOL)msgHidden
 {
     [MJCPromptsView showAutoMessage:msg image:nil textColor:nil starFrame:-64 msgHidden:msgHidden];
-}
-// 显示普通信息(可设置图片)
-+ (void)showAutoHiddenMessage:(NSString *)msg image:(UIImage *)image;
-{
-    [MJCPromptsView showAutoMessage:msg image:image textColor:nil starFrame:-64 msgHidden:YES];
 }
 // 显示文字和图片信息(可添加文字,图片,是否隐藏,可修改类型)
 +(void)showMessage:(NSString *)msg image:(UIImage *)image autoHidden:(BOOL)autoHidden
@@ -180,9 +175,9 @@
 }
 
 /** 添加子控件 */
-+(void)windowAddSubview:(CGFloat)starFrame addControls:(UIView *)addControls
++(void)messageStarFrame:(CGFloat)starFrame addCusttomSubview:(UIView *)custtomSubview;
 {
-    [MJCPromptsView windowAddSubview:starFrame addControls:addControls];
+    [MJCPromptsView windowAddSubview:starFrame addControls:custtomSubview];
 }
 
 +(void)reviseLoadingFrame:(CGRect)loadingFrame
@@ -190,5 +185,20 @@
     [MJCPromptsView setupLoadingFrame:loadingFrame];
 }
 
+
++(void)revisePromptedLayer:(CGFloat)layer
+{
+    [MJCPromptsView setupPromptedLayer:layer];
+}
+
++(void)reviseClickDisappear:(BOOL)clickDisappear;
+{
+    [MJCPromptsView isClickdisappear:clickDisappear];
+}
+
++(void)isHiddenEndShowAnimal:(BOOL)animal
+{
+    [MJCPromptsView isHiddernEndShowAnimal:animal];
+}
 
 @end

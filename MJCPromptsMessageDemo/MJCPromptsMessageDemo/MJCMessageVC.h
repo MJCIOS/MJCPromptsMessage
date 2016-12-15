@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MJCCustomVC : UIViewController
+@interface MJCMessageVC : UIViewController
 
 @end
