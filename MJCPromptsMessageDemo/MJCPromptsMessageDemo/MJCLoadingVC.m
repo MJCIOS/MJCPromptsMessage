@@ -22,8 +22,9 @@
 
 - (IBAction)one2:(id)sender {
     
-//    [MJCPackageMessage isHiddenEndShowAnimal:YES];
+    [MJCPackageMessage isHiddenEndShowAnimal:YES];
     [MJCPackageMessage showsLoading:@"正在高考中"];
+    [MJCPackageMessage revisesLoadingFrame:CGRectMake(0,64,MJCScreenWidth,50)];
     
 }
 - (IBAction)two2:(id)sender {
