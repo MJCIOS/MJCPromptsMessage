@@ -219,7 +219,6 @@ static MJCPackageMessage *packageMessage =nil;
  */
 +(void)isHiddenEndShowAnimal:(BOOL)animal;
 {
-    
     [MJCPromptsMessage isHiddenEndShowAnimal:animal];
 }
 
